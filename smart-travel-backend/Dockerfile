@@ -23,18 +23,18 @@ WORKDIR /app
 # Copy composer files first (for Docker cache optimization)
 COPY composer.json composer.lock ./
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader --no-scripts
+# Install dependencies (no scripts to avoid artisan calls without env vars)
+RUN composer install --no-dev --optimize-autoloader --no-scripts --no-interaction
 
 # Copy rest of application
 COPY . .
 
-# Run post-install scripts
+# Generate autoload files only (no artisan commands - env vars not available at build)
 RUN composer dump-autoload --optimize
 
 # Create storage directories
 RUN mkdir -p storage/logs \
-    storage/framework/cache \
+    storage/framework/cache/data \
     storage/framework/sessions \
     storage/framework/views \
     bootstrap/cache
@@ -45,9 +45,10 @@ RUN chmod -R 775 storage bootstrap/cache
 # Expose port (Railway sets PORT env var)
 EXPOSE ${PORT:-8080}
 
-# Start Laravel
-CMD php artisan config:cache && \
+# Start: run migrations + cache config, then serve
+# These run at container start when env vars ARE available
+CMD php artisan migrate --force && \
+    php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache && \
-    php artisan migrate --force && \
     php artisan serve --host=0.0.0.0 --port=${PORT:-8080}

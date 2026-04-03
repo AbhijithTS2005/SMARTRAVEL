@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Log;
 
 class OpenWeatherService
 {
-    private string $apiKey;
-    private string $baseUrl;
+    private ?string $apiKey;
+    private ?string $baseUrl;
     private int $cacheDuration = 1800; // 30 minutes in seconds
 
     public function __construct()

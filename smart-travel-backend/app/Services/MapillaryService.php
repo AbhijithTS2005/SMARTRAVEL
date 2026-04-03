@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Log;
  */
 class MapillaryService
 {
-    private string $accessToken;
+    private ?string $accessToken;
     private string $baseUrl = 'https://graph.mapillary.com';
     private int $cacheDays = 7; // Cache photos for 7 days
 
