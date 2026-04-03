@@ -198,7 +198,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="col-span-1 md:col-span-1 relative h-[300px] md:h-[450px] overflow-hidden"
           >
-            <Image src="/pic1.jpg" alt="Hill station travel" fill className="object-cover" />
+            <Image src="/travel-hillstation.png" alt="Hill station travel" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           </motion.div>
           <motion.div
@@ -218,7 +218,7 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="col-span-1 relative h-[300px] md:h-[450px] overflow-hidden"
           >
-            <Image src="/pic2.jpg" alt="Luxury resort" fill className="object-cover" />
+            <Image src="/travel-resort.png" alt="Luxury resort" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           </motion.div>
         </div>
