@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Travel API Tester</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      .status {
+        display: inline-block;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        font-size: 0.9em;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        min-height: 600px;
+      }
+
+      .left-panel {
+        padding: 30px;
+        border-right: 1px solid #e0e0e0;
+        overflow-y: auto;
+      }
+
+      .right-panel {
+        padding: 30px;
+        background: #f8f9fa;
+        overflow-y: auto;
+      }
+
+      .endpoint-group {
+        margin-bottom: 30px;
+      }
+
+      .endpoint-group h3 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: left;
+        font-weight: 500;
+      }
+
+      .btn-post {
+        background: #10b981;
+        color: white;
+      }
+
+      .btn-post:hover {
+        background: #059669;
+        transform: translateX(5px);
+      }
+
+      .btn-get {
+        background: #3b82f6;
+        color: white;
+      }
+
+      .btn-get:hover {
+        background: #2563eb;
+        transform: translateX(5px);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #374151;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #e5e7eb;
+        border-radius: 6px;
+        font-size: 1em;
+        font-family: "Courier New", monospace;
+        transition: border 0.3s;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .response-box {
+        background: #1f2937;
+        color: #10b981;
+        padding: 20px;
+        border-radius: 8px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9em;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        max-height: 400px;
+        overflow-y: auto;
+        margin-top: 20px;
+      }
+
+      .success {
+        color: #10b981;
+      }
+
+      .error {
+        color: #ef4444;
+      }
+
+      .info {
+        color: #3b82f6;
+      }
+
+      .token-display {
+        background: #fef3c7;
+        border: 2px solid #fbbf24;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        word-wrap: break-word;
+      }
+
+      .token-display strong {
+        color: #92400e;
+      }
+
+      .saved-token {
+        font-family: "Courier New", monospace;
+        font-size: 0.85em;
+        color: #1f2937;
+        display: block;
+        margin-top: 8px;
+      }
+
+      .clear-btn {
+        background: #ef4444;
+        color: white;
+        margin-top: 10px;
+      }
+
+      .clear-btn:hover {
+        background: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🚀 Smart Travel API Tester</h1>
+        <p class="status">No installation required • Test in browser</p>
+      </header>
+
+      <div class="content">
+        <div class="left-panel">
+          <div class="endpoint-group">
+            <h3>📝 Public Endpoints</h3>
+            <button class="btn-post" onclick="testRegister()">
+              POST /api/register
+            </button>
+            <button class="btn-post" onclick="testLogin()">
+              POST /api/login
+            </button>
+          </div>
+
+          <div class="endpoint-group">
+            <h3>🔒 Protected Endpoints</h3>
+            <button class="btn-get" onclick="testMe()">GET /api/me</button>
+            <button class="btn-post" onclick="testFcmToken()">
+              POST /api/fcm-token
+            </button>
+            <button class="btn-post" onclick="testLogout()">
+              POST /api/logout
+            </button>
+          </div>
+
+          <div id="tokenSection"></div>
+        </div>
+
+        <div class="right-panel">
+          <h3>📊 Request & Response</h3>
+
+          <div class="form-group">
+            <label>API Base URL:</label>
+            <input type="text" id="baseUrl" value="http://localhost:8000/api" />
+          </div>
+
+          <div class="form-group">
+            <label>Request Body (JSON):</label>
+            <textarea
+              id="requestBody"
+              placeholder='{"name": "Test User", "email": "test@example.com", ...}'
+            ></textarea>
+          </div>
+
+          <button class="clear-btn" onclick="clearResponse()">
+            Clear Response
+          </button>
+
+          <div id="response" class="response-box">Waiting for API call...</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let savedToken = null;
+
+      function displayResponse(data, status) {
+        const responseDiv = document.getElementById("response");
+        const statusClass = status >= 200 && status < 300 ? "success" : "error";
+
+        responseDiv.className = `response-box ${statusClass}`;
+        responseDiv.textContent = `Status: ${status}\n\n${JSON.stringify(data, null, 2)}`;
+
+        // Save token if present
+        if (data.data && data.data.token) {
+          savedToken = data.data.token;
+          showTokenSection();
+        }
+      }
+
+      function displayError(error) {
+        const responseDiv = document.getElementById("response");
+        responseDiv.className = "response-box error";
+        responseDiv.textContent = `Error: ${error.message || error}`;
+      }
+
+      function showTokenSection() {
+        const tokenSection = document.getElementById("tokenSection");
+        tokenSection.innerHTML = `
+                <div class="token-display">
+                    <strong>✅ Token Saved!</strong>
+                    <span class="saved-token">${savedToken.substring(0, 50)}...</span>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #92400e;">
+                        This token will be used automatically for protected routes.
+                    </p>
+                </div>
+            `;
+      }
+
+      async function makeRequest(method, endpoint, body = null) {
+        const baseUrl = document.getElementById("baseUrl").value;
+        const url = `${baseUrl}${endpoint}`;
+
+        const options = {
+          method: method,
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        };
+
+        // Add token for protected routes
+        if (
+          savedToken &&
+          (endpoint === "/me" ||
+            endpoint === "/fcm-token" ||
+            endpoint === "/logout")
+        ) {
+          options.headers["Authorization"] = `Bearer ${savedToken}`;
+        }
+
+        if (body) {
+          options.body = JSON.stringify(body);
+          document.getElementById("requestBody").value = JSON.stringify(
+            body,
+            null,
+            2,
+          );
+        }
+
+        try {
+          const response = await fetch(url, options);
+          const data = await response.json();
+          displayResponse(data, response.status);
+        } catch (error) {
+          displayError(error);
+        }
+      }
+
+      function testRegister() {
+        const body = {
+          name: "Test User",
+          email: `test${Date.now()}@example.com`, // Unique email
+          password: "password123",
+          password_confirmation: "password123",
+        };
+        makeRequest("POST", "/register", body);
+      }
+
+      function testLogin() {
+        const body = {
+          email: "test@example.com",
+          password: "password123",
+        };
+        makeRequest("POST", "/login", body);
+      }
+
+      function testMe() {
+        if (!savedToken) {
+          alert("Please login first to get a token!");
+          return;
+        }
+        makeRequest("GET", "/me");
+      }
+
+      function testFcmToken() {
+        if (!savedToken) {
+          alert("Please login first to get a token!");
+          return;
+        }
+        const body = {
+          fcm_token: "test_firebase_token_" + Date.now(),
+        };
+        makeRequest("POST", "/fcm-token", body);
+      }
+
+      function testLogout() {
+        if (!savedToken) {
+          alert("Please login first to get a token!");
+          return;
+        }
+        makeRequest("POST", "/logout");
+        setTimeout(() => {
+          savedToken = null;
+          document.getElementById("tokenSection").innerHTML = "";
+        }, 1000);
+      }
+
+      function clearResponse() {
+        document.getElementById("response").textContent =
+          "Waiting for API call...";
+        document.getElementById("response").className = "response-box";
+        document.getElementById("requestBody").value = "";
+      }
+    </script>
+  </body>
+</html>

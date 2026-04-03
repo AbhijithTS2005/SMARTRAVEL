@@ -1,0 +1,402 @@
+destination_id,name,district,category,climate_type,crowd_level,rating,best_season,air_quality_index,latitude,longitude
+1,Sree Padmanabhaswamy Temple,Thiruvananthapuram,Temple,Tropical,High,4.7,Oct-Mar,42,8.4829,76.9436
+2,Kovalam Beach,Thiruvananthapuram,Beach,Tropical,High,4.5,Sep-May,38,8.3908,76.9786
+3,Varkala Beach,Thiruvananthapuram,Beach,Tropical,High,4.6,Oct-Mar,35,8.7379,76.7103
+4,Ponmudi,Thiruvananthapuram,Hill Station,Hill Station,Moderate,4.4,Sep-May,32,8.7592,77.1147
+5,Agasthyakoodam,Thiruvananthapuram,Peak,Hill Station,Low,4.7,Dec-Feb,25,8.6167,77.2500
+6,Neyyar Dam,Thiruvananthapuram,Dam,Tropical,Moderate,4.3,Oct-Mar,40,8.5333,77.1500
+7,Neyyar Wildlife Sanctuary,Thiruvananthapuram,Wildlife,Tropical,Moderate,4.4,Oct-Mar,35,8.5500,77.1667
+8,Kuthira Malika Palace,Thiruvananthapuram,Palace,Tropical,Moderate,4.5,Oct-Mar,45,8.4829,76.9436
+9,Napier Museum,Thiruvananthapuram,Museum,Tropical,Moderate,4.3,Oct-Mar,48,8.5083,76.9556
+10,Kanakakkunnu Palace,Thiruvananthapuram,Palace,Tropical,Moderate,4.4,Oct-Mar,44,8.5167,76.9500
+11,Shankumugham Beach,Thiruvananthapuram,Beach,Tropical,Moderate,4.2,Sep-May,36,8.4783,76.9097
+12,Akkulam Tourist Village,Thiruvananthapuram,Eco Park,Tropical,Moderate,4.2,Oct-Mar,42,8.5236,76.8917
+13,Poovar Island,Thiruvananthapuram,Island,Tropical,Moderate,4.3,Oct-Mar,33,8.3167,76.9833
+14,Veli Tourist Village,Thiruvananthapuram,Lakefront,Tropical,Moderate,4.1,Oct-Mar,41,8.5167,76.8833
+15,Attukal Bhagavathy Temple,Thiruvananthapuram,Temple,Tropical,High,4.6,Feb-Mar,43,8.4853,76.9458
+16,Janardanaswamy Temple,Thiruvananthapuram,Temple,Tropical,High,4.5,Oct-Mar,37,8.7333,76.7167
+17,Meenmutty Waterfalls,Thiruvananthapuram,Waterfall,Hill Station,Moderate,4.4,Jun-Jan,28,8.7833,77.1333
+18,Peppara Dam,Thiruvananthapuram,Dam,Tropical,Low,4.2,Oct-Mar,34,8.6167,77.1333
+19,Peppara Wildlife Sanctuary,Thiruvananthapuram,Wildlife,Tropical,Low,4.3,Oct-Mar,33,8.6167,77.1333
+20,Vizhinjam Lighthouse,Thiruvananthapuram,Lighthouse,Tropical,Moderate,4.3,Sep-May,39,8.3833,76.9833
+21,Aruvikkara Dam,Thiruvananthapuram,Dam,Tropical,Low,4.1,Oct-Mar,41,8.5333,76.9833
+22,Aruvikkara Bhagavathy Temple,Thiruvananthapuram,Temple,Tropical,Moderate,4.3,Oct-Mar,42,8.5333,76.9833
+23,Chalai Market,Thiruvananthapuram,Market,Tropical,High,4.0,Oct-Mar,55,8.4833,76.9500
+24,Kanyakumari Wildlife Division,Thiruvananthapuram,Forest,Tropical,Low,4.2,Oct-Mar,30,8.3833,77.1500
+25,Kappil Beach,Thiruvananthapuram,Beach,Tropical,Moderate,4.3,Sep-May,35,8.7833,76.6833
+26,Sivagiri Mutt,Thiruvananthapuram,Religious Site,Tropical,High,4.5,Dec-Jan,40,8.7500,76.7167
+27,Thiruvallam Parasurama Temple,Thiruvananthapuram,Temple,Tropical,Moderate,4.3,Oct-Mar,44,8.4667,76.9167
+28,Madavoorpara,Thiruvananthapuram,Heritage Site,Tropical,Low,4.2,Oct-Mar,38,8.6333,76.9333
+29,Vizhinjam Rock Cut Cave Temple,Thiruvananthapuram,Heritage,Tropical,Moderate,4.3,Oct-Mar,37,8.3833,76.9833
+30,Koyikkal Palace,Thiruvananthapuram,Museum,Tropical,Low,4.1,Oct-Mar,36,8.6833,76.9500
+31,Anchuthengu Fort,Thiruvananthapuram,Fort,Tropical,Moderate,4.2,Oct-Mar,39,8.6500,76.7667
+32,Azhimala Shiva Temple,Thiruvananthapuram,Temple,Tropical,Moderate,4.4,Oct-Mar,35,8.4667,76.9667
+33,Varkala Tunnel,Thiruvananthapuram,Heritage,Tropical,Low,4.0,Oct-Mar,34,8.7333,76.7167
+34,Kadinamkulam Lake,Thiruvananthapuram,Lake,Tropical,Low,4.1,Oct-Mar,40,8.5833,76.8167
+35,Beemapally Mosque,Thiruvananthapuram,Mosque,Tropical,Moderate,4.3,Oct-Mar,42,8.4500,76.9333
+36,CSI Christ Church Palayam,Thiruvananthapuram,Church,Tropical,Moderate,4.2,Oct-Mar,44,8.5000,76.9500
+37,St Josephs Cathedral Thiruvananthapuram,Thiruvananthapuram,Church,Tropical,High,4.4,Oct-Mar,43,8.4833,76.9500
+38,Kerala Science and Technology Museum,Thiruvananthapuram,Museum,Tropical,Moderate,4.1,Oct-Mar,46,8.5000,76.9500
+39,Magic Planet,Thiruvananthapuram,Recreation,Tropical,Moderate,4.3,Oct-Mar,41,8.5167,76.9333
+40,Vellayani Lake,Thiruvananthapuram,Lake,Tropical,Low,4.2,Oct-Mar,38,8.4333,76.9833
+41,Akkulam Lake,Thiruvananthapuram,Lake,Tropical,Moderate,4.1,Oct-Mar,42,8.5167,76.8833
+42,Ashtamudi Lake,Kollam,Lake,Tropical,High,4.5,Oct-Mar,40,8.9833,76.6167
+43,Jatayu Earths Center,Kollam,Adventure Park,Tropical,High,4.6,Oct-Mar,36,8.8667,76.8667
+44,Thenmala,Kollam,Eco Tourism,Tropical,Moderate,4.4,Oct-Mar,32,8.9500,77.0667
+45,Palaruvi Waterfalls,Kollam,Waterfall,Tropical,High,4.5,Jun-Jan,30,8.9667,77.1667
+46,Thangassery Lighthouse,Kollam,Lighthouse,Tropical,Moderate,4.3,Sep-May,41,8.8833,76.5667
+47,Thirumullavaram Beach,Kollam,Beach,Tropical,Moderate,4.2,Sep-May,37,8.9000,76.5667
+48,Sasthamkotta Lake,Kollam,Lake,Tropical,Moderate,4.4,Oct-Mar,35,9.0333,76.6333
+49,Kollam Beach,Kollam,Beach,Tropical,High,4.3,Sep-May,43,8.8833,76.5667
+50,Mayyanad Beach,Kollam,Beach,Tropical,Low,4.1,Sep-May,36,8.8333,76.6333
+51,Rameshwara Temple,Kollam,Temple,Tropical,Moderate,4.2,Oct-Mar,39,9.0167,76.6333
+52,Oachira Temple,Kollam,Temple,Tropical,High,4.4,Oct-Mar,42,9.1333,76.5167
+53,Kottarakkara Ganapathy Temple,Kollam,Temple,Tropical,Moderate,4.3,Oct-Mar,40,9.0167,76.7667
+54,Kulathupuzha Sastha Temple,Kollam,Temple,Tropical,Moderate,4.2,Oct-Mar,34,8.9000,77.0500
+55,Aryankavu Temple,Kollam,Temple,Tropical,Low,4.1,Oct-Mar,33,8.9833,77.1500
+56,Achankovil River,Kollam,River,Tropical,Low,4.3,Oct-Mar,32,9.0000,76.9833
+57,Shenduruny Wildlife Sanctuary,Kollam,Wildlife,Tropical,Moderate,4.4,Oct-Mar,31,8.8667,77.2167
+58,Munroe Island,Kollam,Island,Tropical,Moderate,4.3,Oct-Mar,38,8.9833,76.6167
+59,Paravur Lake,Kollam,Lake,Tropical,Moderate,4.2,Oct-Mar,37,8.8000,76.6667
+60,Neendakara Port,Kollam,Port,Tropical,Moderate,4.1,Oct-Mar,44,8.9333,76.5333
+61,Thirunakkara Mahadeva Temple,Kollam,Temple,Tropical,Moderate,4.3,Oct-Mar,41,9.0000,76.5667
+62,Punalur Suspension Bridge,Kollam,Heritage,Tropical,Moderate,4.4,Oct-Mar,39,9.0167,76.9167
+63,Kumbhavurutty Waterfalls,Kollam,Waterfall,Tropical,Moderate,4.3,Jun-Jan,29,8.9833,77.1667
+64,Alumkadavu,Kollam,Heritage,Tropical,Low,4.2,Oct-Mar,36,9.0333,76.5833
+65,Chavara Beach,Kollam,Beach,Tropical,Low,4.1,Sep-May,35,8.9833,76.5333
+66,Velinalloor,Kollam,Village,Tropical,Low,4.0,Oct-Mar,38,8.8667,76.7667
+67,Kottukal Cave Temple,Kollam,Heritage,Tropical,Low,4.2,Oct-Mar,34,8.8500,76.8500
+68,Polachira Wetlands,Kollam,Wetland,Tropical,Low,4.1,Oct-Mar,33,8.9667,76.7000
+69,Azheekal Beach Kollam,Kollam,Beach,Tropical,Low,4.2,Sep-May,36,9.0167,76.5167
+70,Pattazhi Devi Temple,Kollam,Temple,Tropical,Moderate,4.3,Oct-Mar,38,9.0333,76.8000
+71,Ochira Parabrahma Temple,Kollam,Temple,Tropical,High,4.5,Oct-Mar,41,9.1333,76.5167
+72,Mahavishnu Temple Thiruvithamcode,Kollam,Temple,Tropical,Low,4.2,Oct-Mar,35,8.2500,77.1833
+73,St Thomas Fort Tangasseri,Kollam,Fort,Tropical,Moderate,4.3,Oct-Mar,40,8.8833,76.5667
+74,Kallada River,Kollam,River,Tropical,Low,4.1,Oct-Mar,34,9.0000,76.6667
+75,Vellimon Lake,Kollam,Lake,Tropical,Low,4.0,Oct-Mar,37,8.9333,76.6333
+76,Thazhathangady Mosque,Kollam,Mosque,Tropical,Moderate,4.2,Oct-Mar,39,8.9167,76.6000
+77,Sabarimala Temple,Pathanamthitta,Temple,Tropical,Very High,4.8,Nov-Jan,28,9.4333,77.0667
+78,Perunthenaruvi Waterfalls,Pathanamthitta,Waterfall,Tropical,High,4.4,Jun-Jan,30,9.4167,76.8833
+79,Gavi,Pathanamthitta,Eco Tourism,Hill Station,Moderate,4.6,Oct-Mar,26,9.4333,77.1667
+80,Konni Elephant Camp,Pathanamthitta,Wildlife,Tropical,Moderate,4.3,Oct-Mar,35,9.2167,76.8500
+81,Aranmula Parthasarathy Temple,Pathanamthitta,Temple,Tropical,High,4.5,Dec-Jan,38,9.3333,76.6833
+82,Parumala Church,Pathanamthitta,Church,Tropical,High,4.5,Oct-Mar,40,9.3333,76.6167
+83,Malayalapuzha Temple,Pathanamthitta,Temple,Tropical,Moderate,4.3,Oct-Mar,36,9.2667,76.7833
+84,Kakki Dam,Pathanamthitta,Dam,Hill Station,Low,4.2,Oct-Mar,24,9.3000,77.1667
+85,Kakki Reservoir,Pathanamthitta,Reservoir,Hill Station,Low,4.3,Oct-Mar,23,9.3000,77.1667
+86,Pamba River,Pathanamthitta,River,Tropical,Moderate,4.2,Oct-Mar,32,9.3500,76.7500
+87,Pandalam Palace,Pathanamthitta,Palace,Tropical,Moderate,4.2,Oct-Mar,39,9.2167,76.6833
+88,Charalkunnu,Pathanamthitta,Hill,Hill Station,Low,4.3,Sep-May,31,9.3500,76.8333
+89,Kakki-Anathodu Dams,Pathanamthitta,Dam,Hill Station,Low,4.2,Oct-Mar,25,9.3167,77.1667
+90,Thriveni Sangam,Pathanamthitta,Religious Site,Tropical,High,4.5,Nov-Jan,34,9.4167,77.0667
+91,Kadammanitta Devi Temple,Pathanamthitta,Temple,Tropical,Moderate,4.3,Feb-Mar,37,9.3167,76.7667
+92,Achankovil Temple,Pathanamthitta,Temple,Tropical,Moderate,4.2,Oct-Mar,33,9.0833,76.9833
+93,Manjinikkara Church,Pathanamthitta,Church,Tropical,Moderate,4.4,Oct-Mar,36,9.2667,76.7833
+94,Moozhiyar Dam,Pathanamthitta,Dam,Hill Station,Low,4.1,Oct-Mar,27,9.3500,77.0167
+95,Anathode Dam,Pathanamthitta,Dam,Hill Station,Low,4.2,Oct-Mar,24,9.3000,77.1667
+96,Kakki-Anathodu Viewpoint,Pathanamthitta,Viewpoint,Hill Station,Low,4.4,Oct-Mar,26,9.3167,77.1667
+97,Kakki Reservoir Forest Area,Pathanamthitta,Forest,Hill Station,Low,4.2,Oct-Mar,22,9.3000,77.1667
+98,Chandanapally Church,Pathanamthitta,Church,Tropical,Moderate,4.2,Oct-Mar,35,9.1667,76.7333
+99,Kakki Forest Range,Pathanamthitta,Forest,Hill Station,Low,4.3,Oct-Mar,24,9.3000,77.1500
+100,Periyar Tiger Reserve Sabarimala Sector,Pathanamthitta,Wildlife,Hill Station,Moderate,4.5,Oct-Mar,27,9.4167,77.1333
+101,Pandalam Mahadeva Temple,Pathanamthitta,Temple,Tropical,Moderate,4.4,Oct-Mar,38,9.2167,76.6833
+102,Konni Forest Division,Pathanamthitta,Forest,Tropical,Low,4.1,Oct-Mar,33,9.2167,76.8500
+103,Alappuzha Beach,Alappuzha,Beach,Tropical,High,4.4,Sep-May,41,9.4833,76.3167
+104,Alappuzha Lighthouse,Alappuzha,Lighthouse,Tropical,Moderate,4.3,Sep-May,42,9.4833,76.3167
+105,Vembanad Lake,Alappuzha,Lake,Tropical,High,4.6,Oct-Mar,38,9.5833,76.4167
+106,Kuttanad,Alappuzha,Backwaters,Tropical,High,4.7,Oct-Mar,37,9.3333,76.4167
+107,Kumarakom Bird Sanctuary,Alappuzha,Bird Sanctuary,Tropical,High,4.5,Nov-Feb,35,9.6167,76.4333
+108,Pathiramanal Island,Alappuzha,Island,Tropical,Moderate,4.4,Oct-Mar,34,9.6167,76.3833
+109,Marari Beach,Alappuzha,Beach,Tropical,Moderate,4.5,Sep-May,36,9.6000,76.3167
+110,Ambalappuzha Sree Krishna Temple,Alappuzha,Temple,Tropical,High,4.5,Oct-Mar,43,9.3833,76.3667
+111,Karumadi Kuttan,Alappuzha,Heritage,Tropical,Moderate,4.2,Oct-Mar,40,9.3333,76.4333
+112,Mullakkal Rajarajeswari Temple,Alappuzha,Temple,Tropical,High,4.4,Oct-Mar,42,9.4833,76.3333
+113,Arthunkal Church,Alappuzha,Church,Tropical,High,4.4,Jan-Feb,39,9.4333,76.3167
+114,Edathua Church,Alappuzha,Church,Tropical,High,4.5,Oct-Mar,38,9.3667,76.4667
+115,Krishnapuram Palace,Alappuzha,Palace,Tropical,Moderate,4.3,Oct-Mar,37,9.1500,76.5000
+116,Mannarasala Temple,Alappuzha,Temple,Tropical,Moderate,4.4,Oct-Mar,41,9.3167,76.4500
+117,Thottappally Beach,Alappuzha,Beach,Tropical,Low,4.2,Sep-May,35,9.3167,76.3833
+118,Punnamada Lake,Alappuzha,Lake,Tropical,High,4.5,Oct-Mar,39,9.4167,76.3667
+119,Champakulam Church,Alappuzha,Church,Tropical,Moderate,4.3,Oct-Mar,38,9.4000,76.4167
+120,Chavara Bhavan,Alappuzha,Pilgrim Site,Tropical,Moderate,4.2,Oct-Mar,37,9.3500,76.3833
+121,Kayamkulam Lake,Alappuzha,Lake,Tropical,Moderate,4.3,Oct-Mar,36,9.1667,76.5000
+122,International Coir Museum,Alappuzha,Museum,Tropical,Moderate,4.1,Oct-Mar,44,9.4833,76.3333
+123,Thumpoly Beach,Alappuzha,Beach,Tropical,Low,4.2,Sep-May,37,9.5333,76.3167
+124,Andhakaranazhi Beach,Alappuzha,Beach,Tropical,Moderate,4.3,Sep-May,36,9.7333,76.2833
+125,Chettikulangara Devi Temple,Alappuzha,Temple,Tropical,High,4.5,Feb-Mar,42,9.2333,76.4833
+126,Haripad Subrahmanya Temple,Alappuzha,Temple,Tropical,High,4.4,Oct-Mar,41,9.2833,76.4667
+127,Revi Karunakaran Museum,Alappuzha,Museum,Tropical,Moderate,4.4,Oct-Mar,40,9.4833,76.3167
+128,Thanneermukkom Bund,Alappuzha,Dam Structure,Tropical,Moderate,4.2,Oct-Mar,36,9.6667,76.3833
+129,Veliyanad,Alappuzha,Village,Tropical,Low,4.0,Oct-Mar,35,9.5333,76.4167
+130,Kainakary,Alappuzha,Backwaters,Tropical,Low,4.3,Oct-Mar,34,9.4833,76.3667
+131,Kayamkulam Kayal,Alappuzha,Backwater,Tropical,Moderate,4.2,Oct-Mar,37,9.1667,76.4833
+132,Kumarakom,Kottayam,Backwaters,Tropical,High,4.7,Oct-Mar,36,9.6167,76.4333
+133,Ilaveezhapoonchira,Kottayam,Hill,Hill Station,Moderate,4.5,Sep-May,29,9.8333,76.7667
+134,Marmala Waterfalls,Kottayam,Waterfall,Hill Station,Moderate,4.4,Jun-Jan,31,9.7833,76.7667
+135,Ettumanoor Mahadeva Temple,Kottayam,Temple,Tropical,High,4.6,Oct-Mar,43,9.6667,76.5667
+136,Vaikom Mahadeva Temple,Kottayam,Temple,Tropical,High,4.6,Oct-Mar,42,9.7667,76.4000
+137,Thirunakkara Mahadeva Temple,Kottayam,Temple,Tropical,High,4.5,Oct-Mar,44,9.5833,76.5167
+138,St Marys Church Manarcad,Kottayam,Church,Tropical,High,4.4,Sep-Oct,39,9.5833,76.5500
+139,St George Orthodox Church Puthuppally,Kottayam,Church,Tropical,High,4.5,Oct-Mar,40,9.5667,76.5667
+140,Vagamon,Kottayam,Hill,Hill Station,High,4.7,Sep-May,28,9.6833,76.9167
+141,Poonjar Palace,Kottayam,Palace,Tropical,Moderate,4.2,Oct-Mar,38,9.6833,76.7500
+142,Illikkal Kallu,Kottayam,Hill,Hill Station,Moderate,4.6,Sep-May,30,9.7500,76.9000
+143,Aruvikkuzhi Waterfalls,Kottayam,Waterfall,Hill Station,Moderate,4.3,Jun-Jan,32,9.6333,76.7833
+144,Vembanad Backwaters,Kottayam,Backwaters,Tropical,High,4.6,Oct-Mar,37,9.5833,76.4167
+145,Kottayam Cheriapally,Kottayam,Church,Tropical,Moderate,4.3,Oct-Mar,41,9.5833,76.5167
+146,Panachikad Saraswathi Temple,Kottayam,Temple,Tropical,Moderate,4.2,Oct-Mar,39,9.5667,76.5500
+147,Bharananganam Church,Kottayam,Church,Tropical,High,4.5,Oct-Mar,38,9.7000,76.7333
+148,Thangal Hill,Kottayam,Hill,Hill Station,Low,4.3,Sep-May,33,9.7833,76.9500
+149,Malarikkal,Kottayam,Scenic Spot,Tropical,Moderate,4.4,Sep-Nov,34,9.5500,76.4833
+150,Kumarakom Backwaters,Kottayam,Backwaters,Tropical,High,4.7,Oct-Mar,36,9.6167,76.4333
+151,Aymanam,Kottayam,Village,Tropical,Low,4.1,Oct-Mar,37,9.6000,76.5167
+152,Pazhayangadi Mosque Kottayam,Kottayam,Mosque,Tropical,Moderate,4.2,Oct-Mar,38,9.5833,76.5167
+153,Pala,Kottayam,Town,Tropical,Moderate,4.0,Oct-Mar,40,9.7167,76.6833
+154,Erattupetta,Kottayam,Town,Tropical,Moderate,4.0,Oct-Mar,39,9.6833,76.7833
+155,Kuravilangad Church,Kottayam,Church,Tropical,High,4.4,Oct-Mar,38,9.7500,76.5667
+156,Kaduthuruthy Mahadeva Temple,Kottayam,Temple,Tropical,Moderate,4.3,Oct-Mar,41,9.7667,76.5167
+157,Meenachil River,Kottayam,River,Tropical,Low,4.2,Oct-Mar,35,9.6667,76.5500
+158,Munnar,Idukki,Hill Station,Hill Station,Very High,4.8,Sep-May,24,10.0833,77.0667
+159,Eravikulam National Park,Idukki,Wildlife,Hill Station,High,4.7,Oct-Mar,23,10.2000,77.0833
+160,Idukki Dam,Idukki,Dam,Hill Station,High,4.6,Oct-Mar,28,9.8333,76.9667
+161,Mattupetty Dam,Idukki,Dam,Hill Station,High,4.5,Oct-Mar,26,10.1000,77.1167
+162,Anamudi,Idukki,Peak,Hill Station,Moderate,4.8,Oct-Mar,22,10.1667,77.0667
+163,Thekkady,Idukki,Tourism Hub,Hill Station,High,4.7,Oct-Mar,27,9.6000,77.1667
+164,Periyar Wildlife Sanctuary,Idukki,Wildlife,Hill Station,High,4.6,Oct-Mar,26,9.4667,77.2333
+165,Vagamon Meadows,Idukki,Hill,Hill Station,High,4.6,Sep-May,29,9.6833,76.9000
+166,Ramakkalmedu,Idukki,Hill,Hill Station,Moderate,4.5,Sep-May,28,9.8000,77.2333
+167,Kalvari Mount,Idukki,Viewpoint,Hill Station,Moderate,4.5,Oct-Mar,27,9.8500,77.1500
+168,Anchuruli Tunnel,Idukki,Scenic,Hill Station,Moderate,4.4,Oct-Mar,26,9.8333,76.9500
+169,Cheeyappara Waterfalls,Idukki,Waterfall,Hill Station,High,4.6,Jun-Jan,25,10.0000,77.1333
+170,Valara Waterfalls,Idukki,Waterfall,Hill Station,High,4.5,Jun-Jan,25,9.9833,77.1167
+171,Chinnar Wildlife Sanctuary,Idukki,Wildlife,Hill Station,Moderate,4.4,Oct-Mar,29,10.3167,77.1667
+172,Meesapulimala,Idukki,Peak,Hill Station,Moderate,4.7,Sep-May,23,10.0833,77.2167
+173,Top Station,Idukki,Viewpoint,Hill Station,High,4.6,Sep-May,24,10.0500,77.2167
+174,Marayoor,Idukki,Heritage,Hill Station,Moderate,4.4,Oct-Mar,28,10.2667,77.1500
+175,Thoovanam Waterfalls,Idukki,Waterfall,Hill Station,Moderate,4.4,Jun-Jan,27,9.7833,77.1667
+176,Pothamedu Viewpoint,Idukki,Viewpoint,Hill Station,Moderate,4.3,Sep-May,26,10.0667,77.0500
+177,Devikulam,Idukki,Hill,Hill Station,Moderate,4.5,Sep-May,25,10.0667,77.1000
+178,Ponmudi Dam,Idukki,Dam,Hill Station,Low,4.2,Oct-Mar,27,9.7833,76.9667
+179,Kallarkutty Dam,Idukki,Dam,Hill Station,Low,4.2,Oct-Mar,28,9.9833,77.0000
+180,Keezharkuthu Falls,Idukki,Waterfall,Hill Station,Moderate,4.3,Jun-Jan,26,9.9167,77.1167
+181,Hill View Park Idukki,Idukki,Park,Hill Station,Moderate,4.3,Oct-Mar,29,9.8333,76.9500
+182,Kulamavu Dam,Idukki,Dam,Hill Station,Moderate,4.3,Oct-Mar,27,9.8000,76.8833
+183,Thommankuthu Waterfalls,Idukki,Waterfall,Hill Station,Moderate,4.4,Jun-Jan,26,9.9333,76.9333
+184,Power House Waterfalls,Idukki,Waterfall,Hill Station,Low,4.2,Jun-Jan,25,10.0833,77.0500
+185,Kattappana,Idukki,Town,Hill Station,Moderate,4.0,Oct-Mar,30,9.7500,77.1167
+186,Rajamala,Idukki,Hill,Hill Station,Moderate,4.4,Oct-Mar,24,10.1833,77.0667
+187,Mullaperiyar Dam,Idukki,Dam,Hill Station,Low,4.3,Oct-Mar,25,9.5333,77.1333
+188,Kundala Dam,Idukki,Dam,Hill Station,Moderate,4.4,Oct-Mar,24,10.1500,77.0500
+189,Fort Kochi,Ernakulam,Heritage,Tropical,High,4.7,Oct-Mar,44,9.9667,76.2333
+190,Mattancherry Palace,Ernakulam,Palace,Tropical,High,4.5,Oct-Mar,45,9.9667,76.2500
+191,Jew Town,Ernakulam,Heritage,Tropical,High,4.6,Oct-Mar,43,9.9667,76.2500
+192,Paradesi Synagogue,Ernakulam,Religious Site,Tropical,High,4.6,Oct-Mar,44,9.9667,76.2500
+193,Marine Drive Kochi,Ernakulam,Waterfront,Tropical,High,4.5,Oct-Mar,48,9.9667,76.2833
+194,Bolgatty Palace,Ernakulam,Palace,Tropical,Moderate,4.4,Oct-Mar,42,9.9833,76.2667
+195,Cherai Beach,Ernakulam,Beach,Tropical,High,4.5,Sep-May,40,10.1333,76.1833
+196,Hill Palace Museum,Ernakulam,Museum,Tropical,Moderate,4.4,Oct-Mar,41,9.9333,76.3000
+197,Thattekad Bird Sanctuary,Ernakulam,Wildlife,Tropical,Moderate,4.5,Nov-Feb,34,10.1333,76.6833
+198,Mangalavanam Bird Sanctuary,Ernakulam,Wildlife,Tropical,Moderate,4.2,Nov-Feb,46,9.9833,76.2667
+199,Kodungallur Bhagavathy Temple,Ernakulam,Temple,Tropical,High,4.5,Mar-Apr,44,10.2167,76.2000
+200,St Francis Church Kochi,Ernakulam,Church,Tropical,High,4.5,Oct-Mar,45,9.9667,76.2333
+201,Santa Cruz Basilica Kochi,Ernakulam,Church,Tropical,High,4.6,Oct-Mar,44,9.9667,76.2500
+202,Vypin Island,Ernakulam,Island,Tropical,Moderate,4.3,Oct-Mar,39,10.1167,76.2167
+203,Willingdon Island,Ernakulam,Island,Tropical,Moderate,4.2,Oct-Mar,46,9.9500,76.2667
+204,Chottanikkara Temple,Ernakulam,Temple,Tropical,High,4.6,Oct-Mar,43,9.9333,76.3833
+205,Paniyeli Poru,Ernakulam,Scenic Spot,Tropical,Moderate,4.4,Oct-Mar,37,10.1000,76.5333
+206,Bhoothathankettu Dam,Ernakulam,Dam,Tropical,Moderate,4.4,Oct-Mar,35,10.1333,76.6333
+207,Periyar River,Ernakulam,River,Tropical,Moderate,4.3,Oct-Mar,38,10.1667,76.5000
+208,Kodanad Elephant Training Centre,Ernakulam,Wildlife,Tropical,Moderate,4.3,Oct-Mar,36,10.1833,76.5167
+209,Malayattoor Church,Ernakulam,Pilgrim Site,Tropical,High,4.5,Mar-Apr,40,10.2000,76.5167
+210,Athirappilly Waterfalls,Ernakulam,Waterfall,Tropical,Very High,4.7,Jun-Jan,33,10.2833,76.5667
+211,Cherai Lagoon,Ernakulam,Lagoon,Tropical,Low,4.2,Oct-Mar,38,10.1333,76.1833
+212,Munambam Beach,Ernakulam,Beach,Tropical,Moderate,4.2,Sep-May,39,10.1667,76.1667
+213,Thrikkakara Temple,Ernakulam,Temple,Tropical,High,4.4,Oct-Mar,47,10.0333,76.3333
+214,Pallipuram Fort,Ernakulam,Fort,Tropical,Moderate,4.2,Oct-Mar,40,10.1667,76.1833
+215,Aluva Shiva Temple,Ernakulam,Temple,Tropical,High,4.5,Oct-Mar,46,10.1167,76.3500
+216,St George Forane Church Edappally,Ernakulam,Church,Tropical,High,4.5,Oct-Mar,48,10.0167,76.3000
+217,Subhash Bose Park,Ernakulam,Park,Tropical,Moderate,4.3,Oct-Mar,45,9.9667,76.2833
+218,Kadamakkudy Islands,Ernakulam,Islands,Tropical,Low,4.2,Oct-Mar,37,10.0500,76.2167
+219,Kumbalangi,Ernakulam,Village,Tropical,Moderate,4.3,Oct-Mar,36,9.8833,76.2833
+220,Vadakkunnathan Temple,Thrissur,Temple,Tropical,High,4.7,Oct-Mar,42,10.5167,76.2167
+221,Thrissur Zoo,Thrissur,Zoo,Tropical,Moderate,4.2,Oct-Mar,49,10.5167,76.2167
+222,Vazhachal Waterfalls,Thrissur,Waterfall,Tropical,High,4.6,Jun-Jan,32,10.2833,76.5833
+223,Guruvayur Temple,Thrissur,Temple,Tropical,Very High,4.8,Oct-Mar,41,10.6000,76.0333
+224,Chavakkad Beach,Thrissur,Beach,Tropical,Moderate,4.3,Sep-May,40,10.5667,76.0000
+225,Snehatheeram Beach,Thrissur,Beach,Tropical,Moderate,4.4,Sep-May,38,10.4333,76.1167
+226,Peechi Dam,Thrissur,Dam,Tropical,Moderate,4.4,Oct-Mar,35,10.5167,76.3833
+227,Chimmini Wildlife Sanctuary,Thrissur,Wildlife,Tropical,Moderate,4.3,Oct-Mar,34,10.4167,76.4667
+228,Shakthan Thampuran Palace,Thrissur,Palace,Tropical,Moderate,4.4,Oct-Mar,45,10.5167,76.2167
+229,Kerala Kalamandalam,Thrissur,Cultural,Tropical,Moderate,4.5,Oct-Mar,38,10.7500,76.4333
+230,Paramekkavu Bhagavathy Temple,Thrissur,Temple,Tropical,High,4.5,Apr-May,44,10.5167,76.2167
+231,Thiruvambady Temple,Thrissur,Temple,Tropical,High,4.5,Apr-May,44,10.5167,76.2167
+232,Bible Tower,Thrissur,Landmark,Tropical,Moderate,4.1,Oct-Mar,48,10.5167,76.2167
+233,Punnathur Kotta,Thrissur,Wildlife,Tropical,Moderate,4.3,Oct-Mar,39,10.6000,76.0333
+234,Vilangan Hills,Thrissur,Hill,Tropical,Moderate,4.3,Sep-May,36,10.5167,76.1667
+235,Munakkal Beach,Thrissur,Beach,Tropical,Low,4.2,Sep-May,39,10.3833,76.1500
+236,Choolannur Peafowl Sanctuary,Thrissur,Wildlife,Tropical,Low,4.2,Nov-Feb,33,10.6167,76.2000
+237,Poomala Dam,Thrissur,Dam,Tropical,Low,4.2,Oct-Mar,34,10.5167,76.2667
+238,Kauthuka Park,Thrissur,Park,Tropical,Moderate,4.1,Oct-Mar,40,10.5167,76.2167
+239,Chettuva Backwaters,Thrissur,Backwaters,Tropical,Moderate,4.3,Oct-Mar,37,10.5167,76.0333
+240,Our Lady of Dolours Basilica,Thrissur,Church,Tropical,High,4.6,Oct-Mar,46,10.5167,76.2167
+241,Thumboormuzhi Dam,Thrissur,Dam,Tropical,Moderate,4.3,Oct-Mar,35,10.4667,76.2000
+242,Koodalmanikyam Temple,Thrissur,Temple,Tropical,Moderate,4.4,Oct-Mar,41,10.4667,76.2500
+243,Cheraman Juma Mosque,Thrissur,Mosque,Tropical,Moderate,4.3,Oct-Mar,39,10.2167,76.2000
+244,Palakkad Fort,Palakkad,Fort,Tropical,High,4.5,Oct-Mar,44,10.7667,76.6500
+245,Malampuzha Dam,Palakkad,Dam,Tropical,High,4.5,Oct-Mar,40,10.8167,76.6667
+246,Malampuzha Gardens,Palakkad,Garden,Tropical,High,4.4,Oct-Mar,41,10.8167,76.6667
+247,Silent Valley National Park,Palakkad,Wildlife,Hill Station,Moderate,4.7,Oct-Mar,26,11.0667,76.4333
+248,Parambikulam Tiger Reserve,Palakkad,Wildlife,Hill Station,Moderate,4.7,Oct-Mar,27,10.4000,76.7333
+249,Nelliyampathy Hills,Palakkad,Hill,Hill Station,High,4.6,Sep-May,29,10.5167,76.6833
+250,Attappady,Palakkad,Cultural,Hill Station,Moderate,4.3,Oct-Mar,31,11.0667,76.5667
+251,Dhoni Waterfalls,Palakkad,Waterfall,Hill Station,Moderate,4.3,Jun-Jan,33,10.8667,76.6333
+252,Kalpathy Temple,Palakkad,Temple,Tropical,High,4.5,Nov-Dec,45,10.7667,76.6500
+253,Jainimedu Jain Temple,Palakkad,Temple,Tropical,Moderate,4.3,Oct-Mar,42,10.7667,76.6500
+254,Meenvallam Waterfalls,Palakkad,Waterfall,Hill Station,Moderate,4.4,Jun-Jan,32,10.6167,76.7000
+255,Kanjirapuzha Dam,Palakkad,Dam,Tropical,Low,4.2,Oct-Mar,37,10.9833,76.5167
+256,Ottapalam,Palakkad,Town,Tropical,Moderate,4.0,Oct-Mar,41,10.7667,76.3833
+257,Mangalam Dam,Palakkad,Dam,Tropical,Low,4.2,Oct-Mar,36,10.5167,76.5500
+258,Varikkasseri Mana,Palakkad,Heritage,Tropical,Low,4.3,Oct-Mar,39,10.7333,76.5167
+259,Thirumoorthy Dam,Palakkad,Dam,Tropical,Low,4.2,Oct-Mar,35,10.4667,77.0833
+260,Siruvani Dam,Palakkad,Dam,Tropical,Low,4.3,Oct-Mar,34,10.9333,76.6833
+261,Seetharkundu Viewpoint,Palakkad,Viewpoint,Hill Station,Moderate,4.4,Sep-May,30,10.5167,76.7000
+262,Thiruvegappura Temple,Palakkad,Temple,Tropical,Moderate,4.2,Oct-Mar,40,10.9667,76.1167
+263,Thirunelli Temple Palakkad Region,Palakkad,Temple,Hill Station,Low,4.3,Oct-Mar,33,11.0667,76.4333
+264,Pothundi Dam,Palakkad,Dam,Tropical,Low,4.2,Oct-Mar,35,10.8500,76.6333
+265,Nenmara Vallanghy Vela Grounds,Palakkad,Cultural,Tropical,Moderate,4.4,Mar-Apr,43,10.6000,76.6000
+266,Chittur Bhagavathy Temple,Palakkad,Temple,Tropical,Moderate,4.3,Oct-Mar,41,10.7000,76.7333
+267,Ottapalam River View,Palakkad,Scenic,Tropical,Low,4.1,Oct-Mar,38,10.7667,76.3833
+268,Kottakkunnu,Malappuram,Hill Garden,Tropical,Moderate,4.4,Sep-May,39,11.0500,76.0667
+269,Nilambur Teak Museum,Malappuram,Museum,Tropical,Moderate,4.3,Oct-Mar,36,11.2667,76.2333
+270,Adyanpara Waterfalls,Malappuram,Waterfall,Tropical,Moderate,4.4,Jun-Jan,32,11.4500,76.3167
+271,Kodikuthimala,Malappuram,Hill,Tropical,Moderate,4.3,Sep-May,34,11.0333,76.2667
+272,Biyyam Kayal,Malappuram,Lake,Tropical,Low,4.2,Oct-Mar,40,10.7833,76.0167
+273,Kadalundi Bird Sanctuary,Malappuram,Bird Sanctuary,Tropical,Moderate,4.4,Nov-Feb,35,11.1333,75.8167
+274,Thirunavaya Temple,Malappuram,Temple,Tropical,Moderate,4.3,Oct-Mar,41,10.8667,75.9833
+275,Mamburam Mosque,Malappuram,Mosque,Tropical,Moderate,4.3,Oct-Mar,42,11.0333,75.9667
+276,Ponnani Beach,Malappuram,Beach,Tropical,Moderate,4.2,Sep-May,38,10.7833,75.9167
+277,Padinjarekara Beach,Malappuram,Beach,Tropical,Low,4.1,Sep-May,37,11.0833,75.8167
+278,Tanur Beach,Malappuram,Beach,Tropical,Moderate,4.2,Sep-May,36,10.9667,75.8667
+279,Nilambur Kovilakam,Malappuram,Heritage,Tropical,Low,4.2,Oct-Mar,38,11.2667,76.2333
+280,Keraladeshpuram Temple,Malappuram,Temple,Tropical,Moderate,4.3,Oct-Mar,40,10.9833,75.9833
+281,Cheruppadi Mala,Malappuram,Hill,Tropical,Low,4.2,Sep-May,33,11.3000,76.2500
+282,Pazhayangadi Mosque,Malappuram,Mosque,Tropical,Moderate,4.2,Oct-Mar,41,11.0833,76.0000
+283,Arimbra Hills,Malappuram,Hill,Tropical,Moderate,4.3,Sep-May,35,11.1167,76.2167
+284,Kadampuzha Devi Temple,Malappuram,Temple,Tropical,High,4.5,Oct-Mar,39,10.9500,76.0000
+285,Keralamkundu Waterfalls,Malappuram,Waterfall,Tropical,Moderate,4.3,Jun-Jan,31,11.2333,76.2667
+286,Mini Ooty Arimbra,Malappuram,Hill,Tropical,Moderate,4.4,Sep-May,34,11.1167,76.2167
+287,Biyyam Hanging Bridge,Malappuram,Bridge,Tropical,Low,4.2,Oct-Mar,39,10.7833,76.0167
+288,Tirur,Malappuram,Town,Tropical,Moderate,4.0,Oct-Mar,43,10.9000,75.9167
+289,Kottakkal Arya Vaidya Sala,Malappuram,Cultural,Tropical,Moderate,4.3,Oct-Mar,42,10.9833,75.9833
+290,Pooram Temple Tirur,Malappuram,Temple,Tropical,Moderate,4.2,Oct-Mar,41,10.9000,75.9167
+291,Vengara,Malappuram,Town,Tropical,Low,4.0,Oct-Mar,38,11.0500,75.9833
+292,Kozhikode Beach,Kozhikode,Beach,Tropical,High,4.5,Sep-May,47,11.2500,75.7667
+293,Beypore Port,Kozhikode,Port,Tropical,Moderate,4.3,Oct-Mar,44,11.1667,75.8167
+294,Kappad Beach,Kozhikode,Beach,Tropical,High,4.4,Sep-May,39,11.3833,75.7167
+295,Thusharagiri Waterfalls,Kozhikode,Waterfall,Hill Station,High,4.5,Jun-Jan,31,11.4167,76.0167
+296,Mananchira Square,Kozhikode,Park,Tropical,High,4.4,Oct-Mar,48,11.2500,75.7667
+297,Mishkal Mosque,Kozhikode,Mosque,Tropical,Moderate,4.3,Oct-Mar,46,11.2500,75.7667
+298,Tali Temple,Kozhikode,Temple,Tropical,Moderate,4.4,Oct-Mar,47,11.2500,75.7667
+299,Kakkayam Dam,Kozhikode,Dam,Hill Station,Moderate,4.4,Oct-Mar,30,11.5500,75.9167
+300,Peruvannamuzhi Dam,Kozhikode,Dam,Tropical,Moderate,4.3,Oct-Mar,34,11.6000,75.8333
+301,Sarovaram Bio Park,Kozhikode,Eco Park,Tropical,Moderate,4.3,Oct-Mar,45,11.2500,75.7833
+302,SM Street,Kozhikode,Market,Tropical,High,4.3,Oct-Mar,49,11.2500,75.7667
+303,Lokanarkavu Temple,Kozhikode,Temple,Tropical,Moderate,4.3,Oct-Mar,41,11.6167,75.7333
+304,Regional Science Centre and Planetarium Kozhikode,Kozhikode,Museum,Tropical,Moderate,4.2,Oct-Mar,46,11.2500,75.7833
+305,Kadalundi River,Kozhikode,River,Tropical,Moderate,4.1,Oct-Mar,37,11.1333,75.8333
+306,Thikkoti Lighthouse,Kozhikode,Lighthouse,Tropical,Moderate,4.3,Sep-May,38,11.5000,75.6333
+307,Beypore Beach,Kozhikode,Beach,Tropical,Moderate,4.3,Sep-May,42,11.1667,75.8167
+308,Kirtads Museum,Kozhikode,Museum,Tropical,Low,4.1,Oct-Mar,40,11.4167,75.7333
+309,Elathur,Kozhikode,Backwaters,Tropical,Low,4.2,Oct-Mar,36,11.3000,75.7833
+310,Muchukunnu Temple,Kozhikode,Temple,Tropical,Low,4.2,Oct-Mar,39,11.2667,75.8000
+311,Thamarassery Churam,Kozhikode,Scenic,Hill Station,Moderate,4.4,Sep-May,32,11.4167,75.9333
+312,Koyilandy,Kozhikode,Town,Tropical,Moderate,4.0,Oct-Mar,41,11.4333,75.6833
+313,Perambra,Kozhikode,Town,Tropical,Low,4.0,Oct-Mar,38,11.5667,75.7167
+314,Vellari Mala,Kozhikode,Peak,Hill Station,Moderate,4.4,Sep-May,28,11.4667,76.1333
+315,Beypore Lighthouse,Kozhikode,Lighthouse,Tropical,Moderate,4.2,Sep-May,43,11.1667,75.8167
+316,Chaliyar River,Kozhikode,River,Tropical,Low,4.2,Oct-Mar,35,11.1667,75.8000
+317,Edakkal Caves,Wayanad,Heritage,Hill Station,High,4.6,Oct-Mar,30,11.6333,76.2333
+318,Banasura Sagar Dam,Wayanad,Dam,Hill Station,High,4.6,Oct-Mar,28,11.6667,75.9667
+319,Wayanad Wildlife Sanctuary,Wayanad,Wildlife,Hill Station,High,4.5,Oct-Mar,29,11.6667,76.2000
+320,Soochipara Waterfalls,Wayanad,Waterfall,Hill Station,High,4.6,Jun-Jan,27,11.4667,76.2167
+321,Meenmutty Waterfalls,Wayanad,Waterfall,Hill Station,High,4.5,Jun-Jan,26,11.5833,76.1333
+322,Pookode Lake,Wayanad,Lake,Hill Station,High,4.5,Oct-Mar,31,11.5333,76.0167
+323,Chembra Peak,Wayanad,Peak,Hill Station,Moderate,4.7,Sep-May,24,11.5167,76.0833
+324,Kuruvadweep,Wayanad,Island,Hill Station,Moderate,4.5,Oct-Mar,29,11.8167,76.0833
+325,Thirunelli Temple,Wayanad,Temple,Hill Station,Moderate,4.5,Oct-Mar,32,11.9000,75.9833
+326,Pakshipathalam,Wayanad,Trekking,Hill Station,Moderate,4.4,Oct-Mar,26,11.7667,76.2667
+327,Lakkidi View Point,Wayanad,Viewpoint,Hill Station,High,4.6,Sep-May,30,11.5167,76.0167
+328,Kuruva Island,Wayanad,Island,Hill Station,Moderate,4.5,Oct-Mar,28,11.8167,76.0833
+329,Muthanga Wildlife Sanctuary,Wayanad,Wildlife,Hill Station,Moderate,4.4,Oct-Mar,29,11.6667,76.2833
+330,Tholpetty Wildlife Sanctuary,Wayanad,Wildlife,Hill Station,Moderate,4.4,Oct-Mar,28,11.9333,76.0333
+331,Jain Temple Sulthan Bathery,Wayanad,Temple,Hill Station,Moderate,4.3,Oct-Mar,33,11.6667,76.2667
+332,Phantom Rock,Wayanad,Rock Formation,Hill Station,Moderate,4.2,Oct-Mar,31,11.6333,76.1667
+333,Karlad Lake,Wayanad,Lake,Hill Station,Moderate,4.3,Oct-Mar,30,11.6333,75.9833
+334,Kanthanpara Waterfalls,Wayanad,Waterfall,Hill Station,Moderate,4.4,Jun-Jan,27,11.5167,76.0500
+335,Pazhassi Raja Tomb,Wayanad,Heritage,Hill Station,Moderate,4.3,Oct-Mar,32,11.7667,75.9333
+336,Ambalavayal Heritage Museum,Wayanad,Museum,Hill Station,Moderate,4.2,Oct-Mar,34,11.6167,76.2000
+337,Karapuzha Dam,Wayanad,Dam,Hill Station,Low,4.2,Oct-Mar,29,11.6000,76.0833
+338,Mananthavady,Wayanad,Town,Hill Station,Moderate,4.0,Oct-Mar,35,11.8000,76.0000
+339,Sulthan Bathery,Wayanad,Town,Hill Station,Moderate,4.0,Oct-Mar,34,11.6667,76.2667
+340,Panamaram River,Wayanad,River,Hill Station,Low,4.1,Oct-Mar,32,11.7333,76.0833
+341,St Angelo Fort,Kannur,Fort,Tropical,High,4.5,Oct-Mar,41,11.8500,75.3667
+342,Muzhappilangad Beach,Kannur,Beach,Tropical,High,4.7,Sep-May,38,11.8000,75.4500
+343,Payyambalam Beach,Kannur,Beach,Tropical,High,4.4,Sep-May,42,11.8667,75.3667
+344,Aralam Wildlife Sanctuary,Kannur,Wildlife,Tropical,Moderate,4.3,Oct-Mar,33,11.9167,75.8167
+345,Parassinikkadavu Temple,Kannur,Temple,Tropical,High,4.5,Oct-Mar,40,11.9833,75.4000
+346,Dharmadam Island,Kannur,Island,Tropical,Moderate,4.3,Oct-Mar,37,11.7667,75.4667
+347,Ezhimala,Kannur,Hill,Tropical,Moderate,4.4,Sep-May,35,12.0167,75.2167
+348,Thottada Beach,Kannur,Beach,Tropical,Moderate,4.3,Sep-May,39,11.8167,75.4333
+349,Kottiyoor Temple,Kannur,Temple,Hill Station,Moderate,4.4,Oct-Mar,34,11.9000,75.8833
+350,Madayi Kavu,Kannur,Temple,Tropical,Moderate,4.3,Oct-Mar,41,12.0167,75.2333
+351,Palakkayam Thattu,Kannur,Hill,Hill Station,Moderate,4.4,Sep-May,32,11.9167,75.6167
+352,Meenkunnu Beach,Kannur,Beach,Tropical,Low,4.2,Sep-May,38,11.8667,75.3833
+353,Odathil Palli,Kannur,Mosque,Tropical,Moderate,4.2,Oct-Mar,43,11.8667,75.3667
+354,Peralassery Temple,Kannur,Temple,Tropical,Moderate,4.3,Oct-Mar,39,11.8333,75.4833
+355,Kanjirakolli Waterfalls,Kannur,Waterfall,Hill Station,Moderate,4.3,Jun-Jan,31,11.9667,75.7000
+356,Vismaya Water Park,Kannur,Recreation,Tropical,High,4.4,Oct-Mar,44,11.8667,75.4167
+357,Mappila Bay,Kannur,Bay,Tropical,Moderate,4.2,Oct-Mar,40,11.8500,75.3667
+358,Thalassery Fort,Kannur,Fort,Tropical,High,4.5,Oct-Mar,42,11.7500,75.4833
+359,Overburys Folly,Kannur,Landmark,Tropical,Moderate,4.3,Oct-Mar,41,11.7500,75.4833
+360,Arakkal Museum,Kannur,Museum,Tropical,Moderate,4.3,Oct-Mar,43,11.8500,75.3667
+361,Kavvayi Backwaters,Kannur,Backwaters,Tropical,Moderate,4.4,Oct-Mar,36,12.0667,75.2000
+362,Anjarakandy Cinnamon Estate,Kannur,Plantation,Tropical,Low,4.2,Oct-Mar,38,11.9000,75.5000
+363,Chala Beach,Kannur,Beach,Tropical,Low,4.2,Sep-May,37,11.9167,75.3333
+364,Taliparamba Rajarajeshwara Temple,Kannur,Temple,Tropical,High,4.5,Oct-Mar,40,12.0333,75.3500
+365,Kundankuzhi Temple,Kannur,Temple,Tropical,Low,4.2,Oct-Mar,39,11.8833,75.4667
+366,Irikkur,Kannur,Town,Tropical,Low,4.0,Oct-Mar,36,11.9667,75.5500
+367,Iritty,Kannur,Town,Tropical,Low,4.0,Oct-Mar,35,11.9833,75.6667
+368,Punnathur Kotta Elephant Camp,Kannur,Wildlife,Tropical,Moderate,4.3,Oct-Mar,39,11.8667,75.4333
+369,Kannur Lighthouse,Kannur,Lighthouse,Tropical,Moderate,4.3,Sep-May,42,11.8500,75.3667
+370,Bekal Fort,Kasaragod,Fort,Tropical,High,4.7,Oct-Mar,37,12.3833,75.0333
+371,Bekal Beach,Kasaragod,Beach,Tropical,High,4.5,Sep-May,36,12.3833,75.0333
+372,Chandragiri Fort,Kasaragod,Fort,Tropical,Moderate,4.4,Oct-Mar,38,12.4667,75.0000
+373,Ananthapura Lake Temple,Kasaragod,Temple,Tropical,High,4.5,Oct-Mar,35,12.5333,74.9833
+374,Ranipuram,Kasaragod,Hill,Hill Station,Moderate,4.5,Sep-May,29,12.4167,75.3667
+375,Malom Wildlife Sanctuary,Kasaragod,Wildlife,Hill Station,Low,4.3,Oct-Mar,31,12.3833,75.2833
+376,Kappil Beach Kasaragod,Kasaragod,Beach,Tropical,Low,4.2,Sep-May,35,12.4833,74.9833
+377,Nileshwaram,Kasaragod,Town,Tropical,Moderate,4.1,Oct-Mar,39,12.2500,75.1333
+378,Chandragiri River,Kasaragod,River,Tropical,Low,4.2,Oct-Mar,34,12.4667,75.0167
+379,Valiyaparamba Backwaters,Kasaragod,Backwaters,Tropical,Moderate,4.4,Oct-Mar,33,12.1333,75.1333
+380,Hosdurg Fort,Kasaragod,Fort,Tropical,Moderate,4.3,Oct-Mar,40,12.3000,75.0833
+381,Madhur Temple,Kasaragod,Temple,Tropical,Moderate,4.3,Oct-Mar,38,12.5167,75.0000
+382,Mallikarjuna Temple Kasaragod,Kasaragod,Temple,Tropical,Moderate,4.2,Oct-Mar,39,12.5000,75.0000
+383,Kumbla Fort,Kasaragod,Fort,Tropical,Low,4.2,Oct-Mar,37,12.5833,74.9333
+384,Kottancheri Hills,Kasaragod,Hill,Hill Station,Moderate,4.4,Sep-May,30,12.4667,75.3333
+385,Azhithala Beach,Kasaragod,Beach,Tropical,Low,4.2,Sep-May,34,12.1667,75.1333
+386,Valiyaparamba Beach,Kasaragod,Beach,Tropical,Moderate,4.3,Sep-May,33,12.1333,75.1333
+387,Ananthapura Lake,Kasaragod,Lake,Tropical,Low,4.3,Oct-Mar,34,12.5333,74.9833
+388,Maipady Palace,Kasaragod,Heritage,Tropical,Low,4.2,Oct-Mar,38,12.5500,75.0167
+389,Bekal Hole Aqua Park,Kasaragod,Park,Tropical,Moderate,4.2,Oct-Mar,36,12.3833,75.0333
+390,Manjeshwaram,Kasaragod,Town,Tropical,Moderate,4.0,Oct-Mar,37,12.7167,74.8833
+391,Uppala,Kasaragod,Town,Tropical,Moderate,4.0,Oct-Mar,36,12.6667,74.9167
+392,Kanhangad,Kasaragod,Town,Tropical,Moderate,4.0,Oct-Mar,38,12.3000,75.0833
+393,Kasaragod Beach,Kasaragod,Beach,Tropical,Moderate,4.2,Sep-May,35,12.5000,74.9833
+394,Chandragiri Bridge,Kasaragod,Bridge,Tropical,Low,4.1,Oct-Mar,34,12.4667,75.0167
+395,Thattekkad Bird Sanctuary,Ernakulam,Bird Sanctuary,Tropical,Moderate,4.5,Nov-Feb,34,10.1333,76.6833
+396,Thriveni Sangam,Pathanamthitta,Religious Site,Tropical,High,4.5,Nov-Jan,34,9.4167,77.0667
+397,Kumbhavurutty Waterfalls,Kollam,Waterfall,Tropical,Moderate,4.3,Jun-Jan,29,8.9833,77.1667
+398,Palaruvi Viewpoint,Kollam,Viewpoint,Tropical,Low,4.2,Oct-Mar,32,8.9667,77.1667
+399,Konni Forest Division,Pathanamthitta,Forest,Tropical,Low,4.1,Oct-Mar,33,9.2167,76.8500
+400,Punnathur Kotta Elephant Camp,Thrissur,Wildlife,Tropical,Moderate,4.3,Oct-Mar,39,10.6000,76.0333
+401,Anayadikuthu Waterfalls,Kannur,Waterfall,Hill Station,Moderate,4.6,Jun-Jan,28,11.8614,75.5681

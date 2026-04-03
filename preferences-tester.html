@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Travel - Preferences API Tester</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .token-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+            flex: 1;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .response-box {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .success {
+            color: #4ade80;
+        }
+
+        .error {
+            color: #f87171;
+        }
+
+        .range-input {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .quick-login {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .quick-login p {
+            margin-bottom: 10px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌴 Smart Travel - Preferences API Tester</h1>
+            <p class="subtitle">Test User Preferences Endpoints</p>
+        </div>
+
+        <div class="content">
+            <!-- Token Section -->
+            <div class="token-section">
+                <div class="quick-login">
+                    <p><strong>Quick Test:</strong> First register/login using the auth tester to get a token!</p>
+                </div>
+                <label for="token">Bearer Token (Required)</label>
+                <input type="text" id="token" placeholder="Paste your auth token here...">
+            </div>
+
+            <!-- Preferences Form -->
+            <div class="section">
+                <div class="section-title">Travel Preferences</div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label for="climate">Climate Preference</label>
+                    <select id="climate">
+                        <option value="cold">Cold (Hill Stations, Cool Weather)</option>
+                        <option value="moderate" selected>Moderate (Comfortable Temperature)</option>
+                        <option value="hot">Hot (Beaches, Warm Destinations)</option>
+                    </select>
+                </div>
+
+                <div class="range-input" style="margin-bottom: 20px;">
+                    <div>
+                        <label for="min_budget">Min Budget (₹)</label>
+                        <input type="number" id="min_budget" value="1000" min="0">
+                    </div>
+                    <div>
+                        <label for="max_budget">Max Budget (₹)</label>
+                        <input type="number" id="max_budget" value="5000" min="0">
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label>Travel Types (Select at least one)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="type_adventure" value="adventure">
+                            <label for="type_adventure" style="margin: 0;">Adventure</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="type_hill" value="hill_station" checked>
+                            <label for="type_hill" style="margin: 0;">Hill Station</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="type_beach" value="beach" checked>
+                            <label for="type_beach" style="margin: 0;">Beach</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="type_nature" value="nature">
+                            <label for="type_nature" style="margin: 0;">Nature</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="type_cultural" value="cultural">
+                            <label for="type_cultural" style="margin: 0;">Cultural</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="type_wildlife" value="wildlife">
+                            <label for="type_wildlife" style="margin: 0;">Wildlife</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="crowd">Crowd Preference</label>
+                    <select id="crowd">
+                        <option value="any" selected>Any</option>
+                        <option value="less_crowded">Less Crowded</option>
+                        <option value="crowded">Crowded OK</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label>Season Preferences</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="season_summer" value="summer">
+                            <label for="season_summer" style="margin: 0;">Summer (Mar-May)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="season_monsoon" value="monsoon">
+                            <label for="season_monsoon" style="margin: 0;">Monsoon (Jun-Sep)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="season_winter" value="winter" checked>
+                            <label for="season_winter" style="margin: 0;">Winter (Oct-Feb)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="activities">Activities (comma-separated)</label>
+                    <input type="text" id="activities" placeholder="trekking, photography, boating" value="trekking, photography">
+                </div>
+
+                <div class="range-input" style="margin-bottom: 20px;">
+                    <div>
+                        <label for="min_temp">Min Temperature (°C)</label>
+                        <input type="number" id="min_temp" value="15" min="0" max="50">
+                    </div>
+                    <div>
+                        <label for="max_temp">Max Temperature (°C)</label>
+                        <input type="number" id="max_temp" value="28" min="0" max="50">
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="aqi_sensitive">
+                        <label for="aqi_sensitive" style="margin: 0;">Air Quality Sensitive</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button class="btn-primary" onclick="createPreferences()">💾 Save Preferences</button>
+                <button class="btn-secondary" onclick="getPreferences()">📖 Get Preferences</button>
+                <button class="btn-danger" onclick="deletePreferences()">🗑️ Delete Preferences</button>
+            </div>
+
+            <!-- Response -->
+            <div id="response" class="response-box" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8000/api';
+
+        function getToken() {
+            const token = document.getElementById('token').value.trim();
+            if (!token) {
+                alert('Please enter your authentication token first!');
+                return null;
+            }
+            return token;
+        }
+
+        function getTravelTypes() {
+            const types = [];
+            if (document.getElementById('type_adventure').checked) types.push('adventure');
+            if (document.getElementById('type_hill').checked) types.push('hill_station');
+            if (document.getElementById('type_beach').checked) types.push('beach');
+            if (document.getElementById('type_nature').checked) types.push('nature');
+            if (document.getElementById('type_cultural').checked) types.push('cultural');
+            if (document.getElementById('type_wildlife').checked) types.push('wildlife');
+            return types;
+        }
+
+        function getSeasons() {
+            const seasons = [];
+            if (document.getElementById('season_summer').checked) seasons.push('summer');
+            if (document.getElementById('season_monsoon').checked) seasons.push('monsoon');
+            if (document.getElementById('season_winter').checked) seasons.push('winter');
+            return seasons;
+        }
+
+        function getActivities() {
+            const activities = document.getElementById('activities').value.trim();
+            if (!activities) return [];
+            return activities.split(',').map(a => a.trim()).filter(a => a);
+        }
+
+        async function createPreferences() {
+            const token = getToken();
+            if (!token) return;
+
+            const travelTypes = getTravelTypes();
+            if (travelTypes.length === 0) {
+                alert('Please select at least one travel type!');
+                return;
+            }
+
+            const data = {
+                climate_preference: document.getElementById('climate').value,
+                min_budget: parseFloat(document.getElementById('min_budget').value),
+                max_budget: parseFloat(document.getElementById('max_budget').value),
+                travel_types: travelTypes,
+                crowd_preference: document.getElementById('crowd').value,
+                air_quality_sensitive: document.getElementById('aqi_sensitive').checked,
+                season_preferences: getSeasons(),
+                activities_interest: getActivities(),
+                preferred_min_temp: parseFloat(document.getElementById('min_temp').value),
+                preferred_max_temp: parseFloat(document.getElementById('max_temp').value)
+            };
+
+            showResponse('Sending request...');
+
+            try {
+                const response = await fetch(`${API_URL}/preferences`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                showResponse(JSON.stringify(result, null, 2), response.ok);
+            } catch (error) {
+                showResponse(`Error: ${error.message}`, false);
+            }
+        }
+
+        async function getPreferences() {
+            const token = getToken();
+            if (!token) return;
+
+            showResponse('Fetching preferences...');
+
+            try {
+                const response = await fetch(`${API_URL}/preferences`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+                showResponse(JSON.stringify(result, null, 2), response.ok);
+            } catch (error) {
+                showResponse(`Error: ${error.message}`, false);
+            }
+        }
+
+        async function deletePreferences() {
+            const token = getToken();
+            if (!token) return;
+
+            if (!confirm('Are you sure you want to delete your preferences?')) {
+                return;
+            }
+
+            showResponse('Deleting preferences...');
+
+            try {
+                const response = await fetch(`${API_URL}/preferences`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+                showResponse(JSON.stringify(result, null, 2), response.ok);
+            } catch (error) {
+                showResponse(`Error: ${error.message}`, false);
+            }
+        }
+
+        function showResponse(text, success = true) {
+            const responseBox = document.getElementById('response');
+            responseBox.style.display = 'block';
+            responseBox.className = 'response-box ' + (success ? 'success' : 'error');
+            responseBox.textContent = text;
+            responseBox.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

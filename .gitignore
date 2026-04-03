@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+.next/
+smart-travel-frontend/.next/
+
+# Python virtual environment
+.venv/
+
+# IDE / Editor
+.vscode/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Laravel specific
+smart-travel-backend/storage/logs/*.log
+smart-travel-backend/storage/framework/cache/*
+smart-travel-backend/storage/framework/sessions/*
+smart-travel-backend/storage/framework/views/*
+smart-travel-backend/bootstrap/cache/*
+
+# Composer lock (optional - include if you want reproducible builds)
+# smart-travel-backend/composer.lock
+
+# Misc
+*.log
+build_out.txt
+image_check.txt
