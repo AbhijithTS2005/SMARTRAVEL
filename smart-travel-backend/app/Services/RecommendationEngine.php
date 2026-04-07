@@ -215,7 +215,7 @@ class RecommendationEngine
                 $lat,
                 $lng,
                 3,
-                $matchScore  // Only show alternatives that score higher than the selected location
+                $matchScore + 10  // Only show alternatives that score at least 10% higher than the selected location
             );
         }
 
