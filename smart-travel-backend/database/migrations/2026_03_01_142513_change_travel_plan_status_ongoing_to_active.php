@@ -15,7 +15,15 @@ return new class extends Migration {
         DB::table('travel_plans')->where('status', 'ongoing')->update(['status' => 'active']);
 
         // Change the enum to use 'active' instead of 'ongoing'
-        DB::statement("ALTER TABLE travel_plans MODIFY COLUMN status ENUM('planned', 'active', 'completed', 'cancelled') DEFAULT 'planned'");
+        // MySQL: MODIFY COLUMN — PostgreSQL: ALTER COLUMN ... TYPE
+        $connection = DB::getDriverName();
+
+        if ($connection === 'pgsql') {
+            DB::statement("ALTER TABLE travel_plans ALTER COLUMN status TYPE VARCHAR(20)");
+            DB::statement("ALTER TABLE travel_plans ALTER COLUMN status SET DEFAULT 'planned'");
+        } else {
+            DB::statement("ALTER TABLE travel_plans MODIFY COLUMN status ENUM('planned', 'active', 'completed', 'cancelled') DEFAULT 'planned'");
+        }
     }
 
     /**
@@ -25,6 +33,13 @@ return new class extends Migration {
     {
         DB::table('travel_plans')->where('status', 'active')->update(['status' => 'ongoing']);
 
-        DB::statement("ALTER TABLE travel_plans MODIFY COLUMN status ENUM('planned', 'ongoing', 'completed', 'cancelled') DEFAULT 'planned'");
+        $connection = DB::getDriverName();
+
+        if ($connection === 'pgsql') {
+            DB::statement("ALTER TABLE travel_plans ALTER COLUMN status TYPE VARCHAR(20)");
+            DB::statement("ALTER TABLE travel_plans ALTER COLUMN status SET DEFAULT 'planned'");
+        } else {
+            DB::statement("ALTER TABLE travel_plans MODIFY COLUMN status ENUM('planned', 'ongoing', 'completed', 'cancelled') DEFAULT 'planned'");
+        }
     }
 };
