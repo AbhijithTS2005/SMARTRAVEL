@@ -12,6 +12,3 @@ tests/
 phpunit.xml
 check_images.php
 image_check.txt
-database/database.sqlite
-*.log
-*.txt

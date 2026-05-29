@@ -1,59 +1,54 @@
-FROM php:8.3-apache
+FROM php:8.3-cli
 
-# Install system dependencies and PHP extensions
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-        libpng-dev \
-        libonig-dev \
-        libxml2-dev \
-        libzip-dev \
-        libpq-dev \
-        libgmp-dev \
-        zip unzip git curl \
-    && docker-php-ext-install \
-        pdo_mysql pdo_pgsql pgsql \
-        mbstring exif pcntl bcmath gd gmp zip opcache \
-    && a2enmod rewrite \
-    && rm -rf /var/lib/apt/lists/*
+    git \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    libgmp-dev \
+    libzip-dev \
+    zip \
+    unzip \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd gmp zip \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
-COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www/html
+# Set working directory
+WORKDIR /app
 
-# Copy composer files first (layer cache optimisation)
+# Copy composer files first (for Docker cache optimization)
 COPY composer.json composer.lock ./
+
+# Install dependencies (no scripts to avoid artisan calls without env vars)
 RUN composer install --no-dev --optimize-autoloader --no-scripts --no-interaction
 
-# Copy the rest of the application
+# Copy rest of application
 COPY . .
 
-# Generate optimised autoloader
+# Generate autoload files only (no artisan commands - env vars not available at build)
 RUN composer dump-autoload --optimize
 
-# ── Apache configuration ─────────────────────────────────────────────────────
-# Change Apache to listen on port 8080 (Render requirement)
-RUN sed -i 's/Listen 80$/Listen 8080/' /etc/apache2/ports.conf
-
-# Replace default site with our custom VirtualHost config
-COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
-RUN sed -i 's/\r//' /etc/apache2/sites-available/000-default.conf
-
-# ── PHP opcache tuning ───────────────────────────────────────────────────────
-COPY docker/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
-
-# ── Storage permissions ──────────────────────────────────────────────────────
+# Create storage directories
 RUN mkdir -p storage/logs \
-        storage/framework/cache/data \
-        storage/framework/sessions \
-        storage/framework/views \
-        bootstrap/cache \
-    && chown -R www-data:www-data storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache
+    storage/framework/cache/data \
+    storage/framework/sessions \
+    storage/framework/views \
+    bootstrap/cache
 
-# ── Entrypoint ───────────────────────────────────────────────────────────────
-COPY docker/entrypoint.sh /entrypoint.sh
-RUN sed -i 's/\r//' /entrypoint.sh && chmod +x /entrypoint.sh
+# Set permissions
+RUN chmod -R 775 storage bootstrap/cache
 
-EXPOSE 8080
+# Expose port (Railway sets PORT env var)
+EXPOSE ${PORT:-8080}
 
-ENTRYPOINT ["/entrypoint.sh"]
+# Start: run migrations + cache config, then serve
+# These run at container start when env vars ARE available
+CMD php artisan migrate --force && \
+    php artisan config:cache && \
+    php artisan route:cache && \
+    php artisan view:cache && \
+    php artisan serve --host=0.0.0.0 --port=${PORT:-8080}

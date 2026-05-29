@@ -11,16 +11,8 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        $connection = DB::getDriverName();
-
-        if ($connection === 'pgsql') {
-            // PostgreSQL: ALTER COLUMN ... TYPE (column is already a compatible type from the create migration)
-            DB::statement("ALTER TABLE destinations ALTER COLUMN primary_type TYPE VARCHAR(50)");
-            DB::statement("ALTER TABLE destinations ALTER COLUMN primary_type SET DEFAULT 'nature'");
-        } else {
-            // MySQL: drop enum and re-create as string
-            DB::statement("ALTER TABLE destinations MODIFY COLUMN primary_type VARCHAR(50) NOT NULL DEFAULT 'nature'");
-        }
+        // MySQL requires dropping the enum and re-creating as string
+        DB::statement("ALTER TABLE destinations MODIFY COLUMN primary_type VARCHAR(50) NOT NULL DEFAULT 'nature'");
     }
 
     /**
@@ -28,13 +20,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        $connection = DB::getDriverName();
-
-        if ($connection === 'pgsql') {
-            DB::statement("ALTER TABLE destinations ALTER COLUMN primary_type TYPE VARCHAR(50)");
-            DB::statement("ALTER TABLE destinations ALTER COLUMN primary_type SET DEFAULT 'nature'");
-        } else {
-            DB::statement("ALTER TABLE destinations MODIFY COLUMN primary_type ENUM('adventure','hill_station','beach','nature','cultural','wildlife') NOT NULL DEFAULT 'nature'");
-        }
+        DB::statement("ALTER TABLE destinations MODIFY COLUMN primary_type ENUM('adventure','hill_station','beach','nature','cultural','wildlife') NOT NULL DEFAULT 'nature'");
     }
 };
