@@ -6,7 +6,6 @@ echo "==> SmartTravel Backend starting up..."
 cd /var/www/html
 
 # ── 1. Build a .env file from Render's injected environment variables ────────
-# (Artisan commands need a .env file even when env vars are set externally)
 cat > .env << EOF
 APP_NAME="${APP_NAME:-Smart Travel API}"
 APP_ENV="${APP_ENV:-production}"
@@ -40,7 +39,7 @@ VAPID_PUBLIC_KEY="${VAPID_PUBLIC_KEY:-}"
 VAPID_PRIVATE_KEY="${VAPID_PRIVATE_KEY:-}"
 EOF
 
-echo "==> .env file created from environment variables"
+echo "==> .env file created"
 
 # ── 2. Generate APP_KEY if not provided ──────────────────────────────────────
 if [ -z "$APP_KEY" ]; then
@@ -59,7 +58,7 @@ if [ "$FORCE_SEED" = "true" ] || [ "$DEST_COUNT" = "0" ] || [ -z "$DEST_COUNT" ]
     php artisan db:seed --force 2>/dev/null || echo "Seeder skipped — continuing"
 fi
 
-# ── 5. Cache config, routes, views ───────────────────────────────────────────
+# ── 5. Clear and rebuild caches ───────────────────────────────────────────────
 echo "==> Caching Laravel config, routes & views..."
 php artisan cache:clear
 php artisan config:clear
@@ -72,7 +71,6 @@ php artisan view:cache
 # ── 6. Permissions ───────────────────────────────────────────────────────────
 chown -R www-data:www-data storage bootstrap/cache 2>/dev/null || true
 
-# ── 7. Start Supervisor (Nginx + PHP-FPM) ────────────────────────────────────
-mkdir -p /var/log/supervisor
-echo "==> Starting Nginx + PHP-FPM via Supervisor..."
-exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+# ── 7. Start Apache ──────────────────────────────────────────────────────────
+echo "==> Starting Apache..."
+exec apache2-foreground
