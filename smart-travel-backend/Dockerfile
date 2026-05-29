@@ -61,10 +61,11 @@ COPY docker/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 # ── Supervisord – manages nginx + php-fpm in one container ──────────────────
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+RUN sed -i 's/\r//' /etc/supervisor/conf.d/supervisord.conf /etc/nginx/nginx.conf
 
 # ── Entrypoint: run migrations then hand off to supervisord ─────────────────
 COPY docker/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN sed -i 's/\r//' /entrypoint.sh && chmod +x /entrypoint.sh
 
 EXPOSE 8080
 
