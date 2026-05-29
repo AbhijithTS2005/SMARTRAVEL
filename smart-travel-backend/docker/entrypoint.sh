@@ -52,10 +52,10 @@ fi
 echo "==> Running migrations..."
 php artisan migrate --force
 
-# ── 4. Seed the database if destinations table is empty (first deploy) ───────
+# ── 4. Seed the database if FORCE_SEED=true OR destinations table is empty ───
 DEST_COUNT=$(php artisan tinker --execute="echo \App\Models\Destination::count();" 2>/dev/null | tail -1 || echo "0")
-if [ "$DEST_COUNT" = "0" ] || [ -z "$DEST_COUNT" ]; then
-    echo "==> Seeding database (first deploy)..."
+if [ "$FORCE_SEED" = "true" ] || [ "$DEST_COUNT" = "0" ] || [ -z "$DEST_COUNT" ]; then
+    echo "==> Seeding database..."
     php artisan db:seed --force 2>/dev/null || echo "Seeder skipped — continuing"
 fi
 
