@@ -89,7 +89,7 @@ class WikimediaService
                 return [
                     [
                         'original' => $original,
-                        'large' => $this->getThumbUrl($original, 1200),
+                        'large' => $this->getThumbUrl($original, 1280),
                         'medium' => $this->getThumbUrl($original, 800),
                         'small' => $thumbnail,
                         'attribution' => 'Wikipedia — © Wikimedia Commons',
@@ -138,9 +138,9 @@ class WikimediaService
 
                     $photos[] = [
                         'original' => $original,
-                        'large' => $this->getThumbUrl($original, 1200),
+                        'large' => $this->getThumbUrl($original, 1280),
                         'medium' => $thumbnail,
-                        'small' => $this->getThumbUrl($original, 400),
+                        'small' => $this->getThumbUrl($original, 320),
                         'attribution' => 'Wikipedia — © Wikimedia Commons',
                         'link' => "https://en.wikipedia.org/wiki/" . rawurlencode(str_replace(' ', '_', $page['title'])),
                     ];
