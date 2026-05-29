@@ -10,11 +10,14 @@ RUN apk add --no-cache \
     libxml2-dev \
     gmp-dev \
     libzip-dev \
+    libpq-dev \
     zip \
     unzip \
     supervisor \
     && docker-php-ext-install \
         pdo_mysql \
+        pdo_pgsql \
+        pgsql \
         mbstring \
         exif \
         pcntl \
