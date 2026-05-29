@@ -19,9 +19,14 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:3000', '*'],
+    'allowed_origins' => [
+        'http://localhost:3000',
+        'https://smartravel.vercel.app',
+    ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => [
+        '#^https://smartravel-.*\.vercel\.app$#',   // Vercel preview deployments
+    ],
 
     'allowed_headers' => ['*'],
 
