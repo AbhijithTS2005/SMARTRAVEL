@@ -61,6 +61,10 @@ fi
 
 # ── 5. Cache config, routes, views ───────────────────────────────────────────
 echo "==> Caching Laravel config, routes & views..."
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
