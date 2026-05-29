@@ -31,23 +31,12 @@ COPY . .
 RUN composer dump-autoload --optimize
 
 # ── Apache configuration ─────────────────────────────────────────────────────
-# Set document root to Laravel's public/ directory
-ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
-
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
-        /etc/apache2/sites-available/000-default.conf \
-        /etc/apache2/sites-available/default-ssl.conf && \
-    sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' \
-        /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
-
-# Allow .htaccess overrides (needed for Laravel routing)
-RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' \
-        /etc/apache2/apache2.conf || true
-
 # Change Apache to listen on port 8080 (Render requirement)
-RUN sed -i 's/Listen 80$/Listen 8080/' /etc/apache2/ports.conf && \
-    sed -i 's/<VirtualHost \*:80>/<VirtualHost *:8080>/' \
-        /etc/apache2/sites-available/000-default.conf
+RUN sed -i 's/Listen 80$/Listen 8080/' /etc/apache2/ports.conf
+
+# Replace default site with our custom VirtualHost config
+COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
+RUN sed -i 's/\r//' /etc/apache2/sites-available/000-default.conf
 
 # ── PHP opcache tuning ───────────────────────────────────────────────────────
 COPY docker/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
