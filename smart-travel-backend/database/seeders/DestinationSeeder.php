@@ -397,46 +397,46 @@ class DestinationSeeder extends Seeder
         $activityMap = [
             'Beach' => [
                 ['name' => 'Swimming', 'type' => 'water_sports', 'desc' => 'Enjoy swimming in the clear waters'],
-                ['name' => 'Sunbathing', 'type' => 'relaxation', 'desc' => 'Relax on the sandy shores under the sun'],
-                ['name' => 'Beach Volleyball', 'type' => 'sports', 'desc' => 'Play beach sports with friends and family'],
+                ['name' => 'Sunbathing', 'type' => 'camping', 'desc' => 'Relax on the sandy shores under the sun'],
+                ['name' => 'Beach Volleyball', 'type' => 'adventure', 'desc' => 'Play beach sports with friends and family'],
             ],
             'Hill Station' => [
-                ['name' => 'Trekking', 'type' => 'adventure', 'desc' => 'Explore scenic trekking trails through the hills'],
-                ['name' => 'Photography', 'type' => 'leisure', 'desc' => 'Capture stunning landscape photographs'],
-                ['name' => 'Tea Plantation Tours', 'type' => 'sightseeing', 'desc' => 'Visit lush tea estates and learn about tea production'],
+                ['name' => 'Trekking', 'type' => 'trekking', 'desc' => 'Explore scenic trekking trails through the hills'],
+                ['name' => 'Photography', 'type' => 'photography', 'desc' => 'Capture stunning landscape photographs'],
+                ['name' => 'Tea Plantation Tours', 'type' => 'cultural', 'desc' => 'Visit lush tea estates and learn about tea production'],
             ],
             'Temple' => [
-                ['name' => 'Temple Visit', 'type' => 'spiritual', 'desc' => 'Experience spiritual serenity and architectural beauty'],
+                ['name' => 'Temple Visit', 'type' => 'cultural', 'desc' => 'Experience spiritual serenity and architectural beauty'],
                 ['name' => 'Cultural Tours', 'type' => 'cultural', 'desc' => 'Learn about local traditions and religious practices'],
             ],
             'Waterfall' => [
-                ['name' => 'Viewing', 'type' => 'sightseeing', 'desc' => 'Admire the cascading waterfalls'],
-                ['name' => 'Photography', 'type' => 'leisure', 'desc' => 'Capture the natural beauty'],
-                ['name' => 'Nature Walk', 'type' => 'nature', 'desc' => 'Walk through surrounding forest trails'],
+                ['name' => 'Viewing', 'type' => 'photography', 'desc' => 'Admire the cascading waterfalls'],
+                ['name' => 'Photography', 'type' => 'photography', 'desc' => 'Capture the natural beauty'],
+                ['name' => 'Nature Walk', 'type' => 'trekking', 'desc' => 'Walk through surrounding forest trails'],
             ],
             'Backwaters' => [
-                ['name' => 'Houseboat Cruise', 'type' => 'leisure', 'desc' => 'Enjoy a traditional Kerala houseboat experience'],
+                ['name' => 'Houseboat Cruise', 'type' => 'boating', 'desc' => 'Enjoy a traditional Kerala houseboat experience'],
                 ['name' => 'Canoeing', 'type' => 'water_sports', 'desc' => 'Paddle through narrow waterways'],
                 ['name' => 'Village Tours', 'type' => 'cultural', 'desc' => 'Experience authentic rural Kerala life'],
             ],
             'Wildlife' => [
-                ['name' => 'Wildlife Safari', 'type' => 'adventure', 'desc' => 'Spot elephants, tigers, and exotic birds'],
-                ['name' => 'Nature Walks', 'type' => 'nature', 'desc' => 'Guided walks through the sanctuary'],
-                ['name' => 'Bird Watching', 'type' => 'nature', 'desc' => 'Observe rare and migratory bird species'],
+                ['name' => 'Wildlife Safari', 'type' => 'wildlife_safari', 'desc' => 'Spot elephants, tigers, and exotic birds'],
+                ['name' => 'Nature Walks', 'type' => 'trekking', 'desc' => 'Guided walks through the sanctuary'],
+                ['name' => 'Bird Watching', 'type' => 'wildlife_safari', 'desc' => 'Observe rare and migratory bird species'],
             ],
             'Heritage' => [
                 ['name' => 'Guided Tours', 'type' => 'cultural', 'desc' => 'Learn about historical significance'],
-                ['name' => 'Photography', 'type' => 'leisure', 'desc' => 'Capture architectural marvels'],
+                ['name' => 'Photography', 'type' => 'photography', 'desc' => 'Capture architectural marvels'],
             ],
             'Fort' => [
-                ['name' => 'Fort Exploration', 'type' => 'sightseeing', 'desc' => 'Explore ancient fortifications'],
+                ['name' => 'Fort Exploration', 'type' => 'cultural', 'desc' => 'Explore ancient fortifications'],
                 ['name' => 'History Tours', 'type' => 'cultural', 'desc' => 'Learn about colonial history'],
             ],
         ];
 
         $activities = $activityMap[$category] ?? [
-            ['name' => 'Sightseeing', 'type' => 'leisure', 'desc' => 'Explore and discover the destination'],
-            ['name' => 'Photography', 'type' => 'leisure', 'desc' => 'Capture memorable moments'],
+            ['name' => 'Sightseeing', 'type' => 'cultural', 'desc' => 'Explore and discover the destination'],
+            ['name' => 'Photography', 'type' => 'photography', 'desc' => 'Capture memorable moments'],
         ];
 
         foreach ($activities as $activity) {
