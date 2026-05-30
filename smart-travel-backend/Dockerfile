@@ -1,6 +1,6 @@
 FROM php:8.3-cli
 
-# Install system dependencies
+# Install system dependencies + mysqli for startup health check
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     zip \
     unzip \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd gmp zip \
+    && docker-php-ext-install pdo_mysql mysqli mbstring exif pcntl bcmath gd gmp zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
@@ -23,16 +23,16 @@ WORKDIR /app
 # Copy composer files first (for Docker cache optimization)
 COPY composer.json composer.lock ./
 
-# Install dependencies (no scripts to avoid artisan calls without env vars)
+# Install dependencies (no scripts - env vars not available at build time)
 RUN composer install --no-dev --optimize-autoloader --no-scripts --no-interaction
 
-# Copy rest of application
+# Copy application files
 COPY . .
 
-# Generate autoload files only (no artisan commands - env vars not available at build)
+# Generate optimized autoload
 RUN composer dump-autoload --optimize
 
-# Create storage directories
+# Create required storage directories
 RUN mkdir -p storage/logs \
     storage/framework/cache/data \
     storage/framework/sessions \
@@ -42,9 +42,11 @@ RUN mkdir -p storage/logs \
 # Set permissions
 RUN chmod -R 775 storage bootstrap/cache
 
-# Expose port (Railway sets PORT env var)
-EXPOSE ${PORT:-8080}
+# Copy and make startup script executable
+RUN chmod +x docker/startup.sh
 
-# Start: run migrations + cache config, then serve
-# These run at container start when env vars ARE available
-CMD ["/bin/sh", "-c", "php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"]
+# Expose port (Render/Fly/Railway all set PORT env var)
+EXPOSE 8080
+
+# Use startup script (handles DB wait + migrations + serve)
+CMD ["/bin/sh", "docker/startup.sh"]

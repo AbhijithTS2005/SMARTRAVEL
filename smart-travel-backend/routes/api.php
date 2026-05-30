@@ -21,9 +21,19 @@ use App\Http\Controllers\Api\PushSubscriptionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+// Health check endpoint (used by Render, Docker, load balancers)
+Route::get('/health', function () {
+    return response()->json([
+        'status'  => 'ok',
+        'app'     => config('app.name'),
+        'env'     => config('app.env'),
+    ]);
+});
+
 // Public routes (no authentication required)
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+
 
 // Destinations (public - browsing)
 Route::get('/destinations', [DestinationController::class, 'index']);

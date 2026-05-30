@@ -1,0 +1,61 @@
+# render.yaml — Render Blueprint for Smart Travel Backend
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: smart-travel-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    rootDir: smart-travel-backend
+    plan: free
+    region: singapore
+    branch: main
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_NAME
+        value: Smart Travel API
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        value: base64:DhscWJWJ2HeMOf52KyiRf+3ViEFEaS/NWIVf4dkccwM=
+      - key: APP_URL
+        fromService:
+          type: web
+          name: smart-travel-backend
+          property: host
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: error
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        sync: false   # Set manually in Render dashboard
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_DATABASE
+        sync: false   # Set manually in Render dashboard
+      - key: DB_USERNAME
+        sync: false   # Set manually in Render dashboard
+      - key: DB_PASSWORD
+        sync: false   # Set manually in Render dashboard
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
+      - key: OPENWEATHER_API_KEY
+        value: ca74c8b564da73ee0399a1b55c518a24
+      - key: OPENWEATHER_BASE_URL
+        value: https://api.openweathermap.org/data/3.0
+      - key: PEXELS_API_KEY
+        value: KREMaEwFSnEympXukXlBYGGuzZaIhux3rESmqMC9IJDQizhrfolBMkSs
+      - key: VAPID_SUBJECT
+        value: mailto:alerts@smartravel.com
+      - key: VAPID_PUBLIC_KEY
+        value: BLSKIv-NWjUKkiBRHpmHoudh3MwqClr6UXgi2dRmSp5OK0Ivlyus2e8t-rxI2Bjm5iaAHscnf7ROQwh3s2e7ou0
+      - key: VAPID_PRIVATE_KEY
+        value: rxkD0mcLlWlpLd7RN3iFrSQAR40iE8tyc6hLL5AKtl8
