@@ -12,11 +12,12 @@ class DestinationSeeder extends Seeder
 {
     public function run(): void
     {
-        // Skip if already seeded to prevent duplicates on redeploy
-        if (Destination::count() > 0) {
-            $this->command->info('Destinations already seeded, skipping...');
-            return;
-        }
+        // Truncate related tables and re-seed cleanly (safe for initial deployment)
+        \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\DestinationActivity::truncate();
+        \App\Models\DestinationClimate::truncate();
+        Destination::truncate();
+        \DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $csvFile = database_path('seeders/destinations_sample.csv');
 
@@ -29,6 +30,7 @@ class DestinationSeeder extends Seeder
         $header = fgetcsv($file); // Skip header row
 
         $count = 0;
+        $seen = [];
         while (($row = fgetcsv($file)) !== false) { // Import all rows
             // Parse CSV row
             $data = [
@@ -43,6 +45,12 @@ class DestinationSeeder extends Seeder
                 'latitude' => (float) $row[9],
                 'longitude' => (float) $row[10],
             ];
+
+            // Skip duplicates in CSV
+            if (isset($seen[$data['name']])) {
+                continue;
+            }
+            $seen[$data['name']] = true;
 
             try {
                 // Create destination
@@ -358,14 +366,14 @@ class DestinationSeeder extends Seeder
     {
         $climateProfiles = [
             'Hill Station' => [
-                ['season' => 'summer', 'temp_min' => 15, 'temp_max' => 25, 'rainfall' => 50, 'weather' => 'Pleasant', 'aqi' => max($aqi - 3, 20)],
-                ['season' => 'monsoon', 'temp_min' => 12, 'temp_max' => 20, 'rainfall' => 250, 'weather' => 'Rainy', 'aqi' => max($aqi - 5, 18)],
-                ['season' => 'winter', 'temp_min' => 10, 'temp_max' => 20, 'rainfall' => 30, 'weather' => 'Cool', 'aqi' => max($aqi - 3, 19)],
+                ['season' => 'summer', 'temp_min' => 15, 'temp_max' => 25, 'rainfall' => 50, 'weather' => 'cloudy', 'aqi' => max($aqi - 3, 20)],
+                ['season' => 'monsoon', 'temp_min' => 12, 'temp_max' => 20, 'rainfall' => 250, 'weather' => 'rainy', 'aqi' => max($aqi - 5, 18)],
+                ['season' => 'winter', 'temp_min' => 10, 'temp_max' => 20, 'rainfall' => 30, 'weather' => 'misty', 'aqi' => max($aqi - 3, 19)],
             ],
             'Tropical' => [
-                ['season' => 'summer', 'temp_min' => 25, 'temp_max' => 35, 'rainfall' => 40, 'weather' => 'Hot & Humid', 'aqi' => min($aqi + 5, 100)],
-                ['season' => 'monsoon', 'temp_min' => 23, 'temp_max' => 30, 'rainfall' => 300, 'weather' => 'Heavy Rain', 'aqi' => $aqi],
-                ['season' => 'winter', 'temp_min' => 22, 'temp_max' => 32, 'rainfall' => 20, 'weather' => 'Pleasant', 'aqi' => max($aqi - 2, 25)],
+                ['season' => 'summer', 'temp_min' => 25, 'temp_max' => 35, 'rainfall' => 40, 'weather' => 'sunny', 'aqi' => min($aqi + 5, 100)],
+                ['season' => 'monsoon', 'temp_min' => 23, 'temp_max' => 30, 'rainfall' => 300, 'weather' => 'rainy', 'aqi' => $aqi],
+                ['season' => 'winter', 'temp_min' => 22, 'temp_max' => 32, 'rainfall' => 20, 'weather' => 'sunny', 'aqi' => max($aqi - 2, 25)],
             ],
         ];
 
