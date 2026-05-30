@@ -12,6 +12,12 @@ class DestinationSeeder extends Seeder
 {
     public function run(): void
     {
+        // Skip if already seeded to prevent duplicates on redeploy
+        if (Destination::count() > 0) {
+            $this->command->info('Destinations already seeded, skipping...');
+            return;
+        }
+
         $csvFile = database_path('seeders/destinations_sample.csv');
 
         if (!file_exists($csvFile)) {
