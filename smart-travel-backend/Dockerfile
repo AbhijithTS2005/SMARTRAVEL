@@ -1,52 +1,68 @@
-FROM php:8.3-cli
+FROM php:8.3-fpm-alpine
 
-# Install system dependencies + mysqli for startup health check
-RUN apt-get update && apt-get install -y \
+# Install system dependencies
+RUN apk add --no-cache \
+    nginx \
     git \
     curl \
     libpng-dev \
-    libonig-dev \
+    oniguruma-dev \
     libxml2-dev \
-    libgmp-dev \
+    gmp-dev \
     libzip-dev \
     zip \
     unzip \
-    && docker-php-ext-install pdo_mysql mysqli mbstring exif pcntl bcmath gd gmp zip \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+    supervisor \
+    && docker-php-ext-install \
+        pdo_mysql \
+        mbstring \
+        exif \
+        pcntl \
+        bcmath \
+        gd \
+        gmp \
+        zip \
+        opcache
 
 # Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
 
-# Set working directory
-WORKDIR /app
+WORKDIR /var/www/html
 
-# Copy composer files first (for Docker cache optimization)
+# Copy composer files first (layer cache optimisation)
 COPY composer.json composer.lock ./
 
-# Install dependencies (no scripts - env vars not available at build time)
+# Install PHP dependencies (no scripts – env vars not available at build time)
 RUN composer install --no-dev --optimize-autoloader --no-scripts --no-interaction
 
-# Copy application files
+# Copy the rest of the application
 COPY . .
 
-# Generate optimized autoload
+# Generate optimised autoloader
 RUN composer dump-autoload --optimize
 
-# Create required storage directories
+# Create required directories and set permissions
 RUN mkdir -p storage/logs \
-    storage/framework/cache/data \
-    storage/framework/sessions \
-    storage/framework/views \
-    bootstrap/cache
+        storage/framework/cache/data \
+        storage/framework/sessions \
+        storage/framework/views \
+        bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
 
-# Set permissions
-RUN chmod -R 775 storage bootstrap/cache
+# ── Nginx config ────────────────────────────────────────────────────────────
+COPY docker/nginx.conf /etc/nginx/nginx.conf
 
-# Copy and make startup script executable
-RUN chmod +x docker/startup.sh
+# ── PHP-FPM opcache tuning ───────────────────────────────────────────────────
+COPY docker/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
-# Expose port (Render/Fly/Railway all set PORT env var)
+# ── Supervisord – manages nginx + php-fpm in one container ──────────────────
+COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# ── Entrypoint: run migrations then hand off to supervisord ─────────────────
+COPY docker/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 8080
 
-# Use startup script (handles DB wait + migrations + serve)
-CMD ["/bin/sh", "docker/startup.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
