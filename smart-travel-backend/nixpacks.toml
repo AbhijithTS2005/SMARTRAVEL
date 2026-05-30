@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["php83", "php83Extensions.pdo", "php83Extensions.pdo_mysql", "php83Extensions.mbstring", "php83Extensions.xml", "php83Extensions.curl", "php83Extensions.openssl", "php83Extensions.tokenizer", "php83Extensions.fileinfo", "php83Extensions.gmp", "php83Extensions.zip"]
+nixPkgs = ["php83", "php83Extensions.pdo", "php83Extensions.pdo_mysql", "php83Extensions.mbstring", "php83Extensions.xml", "php83Extensions.curl", "php83Extensions.openssl", "php83Extensions.tokenizer", "php83Extensions.fileinfo", "php83Extensions.gmp", "php83Extensions.zip", "php83Extensions.bcmath", "php83Extensions.gd", "php83Extensions.opcache", "php83Extensions.pcntl", "php83Extensions.exif"]
 
 [phases.install]
 cmds = [
@@ -14,4 +14,4 @@ cmds = [
 ]
 
 [start]
-cmd = "php artisan storage:link --force 2>/dev/null || true && php artisan config:clear && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"
+cmd = "php artisan config:clear && php artisan migrate --force && php artisan db:seed --force --class=DatabaseSeeder 2>/dev/null || true && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan storage:link --force 2>/dev/null || true && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"
